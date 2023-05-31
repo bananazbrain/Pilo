@@ -154,10 +154,13 @@ class Watcher {
 			// console.log(file)
 			let objFile = path.parse(file)
 			if (objFile.ext === '.pug') {
+				fs.mkdir(path.join(PATH.DIST, objFile.name), err => {
+					if (!err) {
+						fs.writeFile(path.join(PATH.DIST, objFile.name, '/index.html'), Watcher.htmlBeautify(file), (err) => {
 
-				fs.writeFile(path.join(PATH.DIST, objFile.name + '.html'), Watcher.htmlBeautify(file), (err) => {
-
-				});
+						});
+					}
+				})
 			}
 		})
 
