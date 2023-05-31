@@ -4,27 +4,31 @@
 @import grid
 
 // @import ../../components/btn/btn
+// @import ../../components/field/field
+// @import ../../components/check/check
+// @import ../../components/slider/slider
+// @import ../../components/modal/modal
 
 // TYPOGRAPHY	
 .h1
-	font-size: px
-	line-height: px
+	font-size: 48px
+	line-height: 62px
 
 .h2
-	font-size: px
-	line-height: px
+	font-size: 40px
+	line-height: 58px
 
 .h3
-	font-size: px
-	line-height: px
+	font-size: 32px
+	line-height: 38px
 
 .h4
-	font-size: px
-	line-height: px
+	font-size: 22px
+	line-height: 34px
 
 .h5
-	font-size: px
-	line-height: px
+	font-size: 18px
+	line-height: 22px
 
 // COMMON ELEMENTS
 .inner
@@ -65,7 +69,23 @@
 
 .logo
 	width: 100%
-	display: block
+	display: flex
+	align-items: center
+	&__img
+		width: 127px
+	&__text
+		width: calc( 100% - 127px )
+		padding-left: 64px
+		position: relative
+		&:before
+			left: 0
+			top: 50%
+			width: 1px
+			height: calc( 100% - 40px )
+			transform: translateY(-50%)
+			background: #D3D3D3
+			position: absolute
+			content: ""
 
 // ANIMATION
 .fadeIn

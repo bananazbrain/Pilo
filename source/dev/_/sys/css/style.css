@@ -1,9 +1,19 @@
 :root {
-  --ff-main: "Roboto", sans-serif;
-  --fz-main: 16px;
-  --black: #000;
-  --white: #FFF;
+  --font-main: "Gilroy", sans-serif;
+  --font-size-main: 16px;
+  --color-primary: #FBCC50;
+  --color-secondary: #4FA559;
+  --grad-primary: linear-gradient(227.75deg, #F9E3AE 5.11%, #FCC532 76.14%), linear-gradient(189.67deg, #F9E3AE -10.01%, #FBD369 67.76%);
+  --color-black: #1B1B1B;
+  --color-white: #FFFFFF;
+  --color-gray: #F5F5F5;
+  --color-gray-2: #818181;
+  --color-dark: #202020;
+  --color-text: #333333;
   --transition: .3s ease-in-out;
+  --border-sm: 8px;
+  --border-md: 10px;
+  --border: 16px;
 }
 
 *, :before, :after {
@@ -152,28 +162,28 @@ path, circle, rect, line {
 }
 
 .h1 {
-  font-size: px;
-  line-height: px;
+  font-size: 48px;
+  line-height: 62px;
 }
 
 .h2 {
-  font-size: px;
-  line-height: px;
+  font-size: 40px;
+  line-height: 58px;
 }
 
 .h3 {
-  font-size: px;
-  line-height: px;
+  font-size: 32px;
+  line-height: 38px;
 }
 
 .h4 {
-  font-size: px;
-  line-height: px;
+  font-size: 22px;
+  line-height: 34px;
 }
 
 .h5 {
-  font-size: px;
-  line-height: px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .inner {
@@ -222,7 +232,26 @@ path, circle, rect, line {
 
 .logo {
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+}
+.logo__img {
+  width: 127px;
+}
+.logo__text {
+  width: calc(100% - 127px);
+  padding-left: 64px;
+  position: relative;
+}
+.logo__text:before {
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: calc(100% - 40px);
+  transform: translateY(-50%);
+  background: #D3D3D3;
+  position: absolute;
+  content: "";
 }
 
 .fadeIn {
