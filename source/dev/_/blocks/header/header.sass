@@ -1,4 +1,80 @@
-// .header
+.header
+	width: 100%
+	z-index: 100
+	padding: 24px
+	position: fixed
+	&__wrap
+		align-items: center
+		justify-content: space-between
+	&__logo
+		max-width: 346px
+	&__map
+		width: 100%
+		max-width: 225px
+		align-items: center
+		&-img
+			width: 64px
+			height: 64px
+			border-radius: 50%
+			overflow: hidden
+		&-info
+			width: calc( 100% - 64px )
+			padding-left: 22px
+	&__socials
+		&-list
+			gap: 12px
+			margin-top: 8px
+			justify-content: center
+		&-item
+			width: 36px
+			height: 36px
+			border-radius: 50%
+			overflow: hidden
+			display: flex
+			align-items: center
+			justify-content: center
+		a[href^="https://t.me/"]
+			background: #099DE6
+			&:hover
+				background: darken(#099DE6, 5%)
+		a[href^="https://wa.me/"]
+			background: #12C868
+			&:hover
+				background: darken(#12C868, 5%)
+	&__contacts
+		gap: 8px
+		display: flex
+		align-items: flex-end
+		flex-direction: column
+		&-time
+			font-size: 12px
+			position: relative
+			&:before
+				left: -10px
+				top: 5px
+				width: 6px
+				height: 6px
+				border-radius: 50%
+				background: #64CF71
+				position: absolute
+				content: ""
+		&-tel
+			font-size: 22px
+			font-weight: 700
+			position: relative
+			&:before
+				top: 5px
+				width: 17px
+				height: 17px
+				left: auto
+				margin-left: -22px
+				background: url('../../uploads/icons/tel-green.svg') no-repeat
+				background-size: contain
+				position: absolute
+				content: ""
+		&-callback
+			font-size: 14px
+			font-weight: 600
 
 @media screen and (max-width: 1220px)
 	// .header

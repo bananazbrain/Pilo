@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  z-index: 100;
+  padding: 24px;
+  position: fixed;
+}
+.header__wrap {
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  max-width: 346px;
+}
+.header__map {
+  width: 100%;
+  max-width: 225px;
+  align-items: center;
+}
+.header__map-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.header__map-info {
+  width: calc(100% - 64px);
+  padding-left: 22px;
+}
+.header__socials-list {
+  gap: 12px;
+  margin-top: 8px;
+  justify-content: center;
+}
+.header__socials-item {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__socials a[href^="https://t.me/"] {
+  background: #099DE6;
+}
+.header__socials a[href^="https://t.me/"]:hover {
+  background: #088ccd;
+}
+.header__socials a[href^="https://wa.me/"] {
+  background: #12C868;
+}
+.header__socials a[href^="https://wa.me/"]:hover {
+  background: #10b15c;
+}
+.header__contacts {
+  gap: 8px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.header__contacts-time {
+  font-size: 12px;
+  position: relative;
+}
+.header__contacts-time:before {
+  left: -10px;
+  top: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #64CF71;
+  position: absolute;
+  content: "";
+}
+.header__contacts-tel {
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+}
+.header__contacts-tel:before {
+  top: 5px;
+  width: 17px;
+  height: 17px;
+  left: auto;
+  margin-left: -22px;
+  background: url("../../uploads/icons/tel-green.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  content: "";
+}
+.header__contacts-callback {
+  font-size: 14px;
+  font-weight: 600;
+}

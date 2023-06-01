@@ -30,6 +30,10 @@
 	font-size: 18px
 	line-height: 22px
 
+.t1
+	font-size: 12px
+	line-height: 21px
+
 // COMMON ELEMENTS
 .inner
 	overflow: hidden
@@ -75,17 +79,29 @@
 		width: 127px
 	&__text
 		width: calc( 100% - 127px )
+		color: var(--color-gray-2)
 		padding-left: 64px
 		position: relative
 		&:before
-			left: 0
+			left: 32px
 			top: 50%
 			width: 1px
-			height: calc( 100% - 40px )
+			height: calc( 100% - 20px )
 			transform: translateY(-50%)
 			background: #D3D3D3
 			position: absolute
 			content: ""
+
+.link
+	font-weight: 600
+	color: var(--color-secondary)
+	text-decoration: underline
+	text-underline-offset: 2px
+	&:hover
+		text-decoration-color: transparent
+
+.tel
+	font-feature-settings: 'tnum' on, 'lnum' on
 
 // ANIMATION
 .fadeIn

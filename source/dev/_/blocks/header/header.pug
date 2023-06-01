@@ -2,4 +2,25 @@ include ../../sys/pug/vars
 
 header.header
 	.case
-		
+		.header__wrap.row
+			.header__logo.logo
+				.logo__img
+					img(src="_/uploads/logo.svg", alt="")
+				.logo__text.t1 Фанера оптом и в розницу #[br]с доставкой по Москве #[br]и Московской области
+			.header__map.row
+				.header__map-img
+					img(src="/_/uploads/map.png" srcset="/_/uploads/map-2x.png 2x", alt="")
+				.header__map-info
+					.header__map-text.t1 г. Москва, 41 км МКАД, ТК Мельница
+					a.header__map-link.link.t1(href="#contacts") Показать на карте
+			.header__socials
+				.header__socials-text.tac.t1 Спрашивайте, #[br]мы сейчас онлайн
+				.header__socials-list.row
+					a.header__socials-item(href="https://t.me/+79175030777" target="_blank")
+						img(src="_/uploads/icons/tg.svg", alt="")
+					a.header__socials-item(href="https://wa.me/79175030777" target="_blank")
+						img(src="_/uploads/icons/wh.svg", alt="")
+			.header__contacts
+				.header__contacts-time Звоните, Пн - Пт 9:00 - 22:00
+				a.header__contacts-tel.tel(href="tel:+79175030777") +7 (917) 503-07-77
+				a.header__contacts-callback.link(data-fancybox data-src="#modal-callback" href="javascript:;") Заказать обратный звонок
