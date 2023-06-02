@@ -88,3 +88,41 @@ block content
 		.quiz__decor-bottom.decor-bottom.cover
 			img(src="_/uploads/decor/decor-bottom.png", alt="")
 
+	.consult.bg
+		.case
+			.consult__wrap.row
+				.consult__info
+					.consult__title.h2 #[h2 ]Не знаете какой вид #[br]фанеры выбрать?
+					.consult__subtitle #[h4 Получите #[span.bg-green бесплатную консультацию] #[br]от специалиста с опытом более 10 лет]
+					.consult__pros
+						.consult__pros-item.h5 #[strong Поможем подобрать] фанеру, которая подходит под вашу задачу лучше всего
+						.consult__pros-item.h5 #[strong Расскажем,] как можно сэкономить #[br]и получить скидку на нашу продукцию
+						.consult__pros-item.h5 #[strong Рассчитаем точную стоимость] вашего заказа с доставкой до нужного места
+				.consult__preview
+					.consult__img
+						img(src="/_/uploads/manager.png" srcset="/_/uploads/manager-2x.png 2x", alt="")
+					.consult__person.tac
+						.consult__person-name.h5 Никита Сивков
+						.consult__person-duty Менеджер по продажам #[br]Опыт более 10 лет
+				.consult__form.form
+					.form__title.tac Заполните форму
+					.form__subtitle.h5.tac Наш специалист свяжется с вами в течение #[br]5 минут и ответит на все возникшие вопросы
+					.form__fields
+						.form__field.field.--required.--name
+							.field__wrap
+								.field__icon
+									img(src="_/uploads/icons/person-gray.svg", alt="")
+								input.field__area(type="name" name="name" placeholder="Как к вам обращаться*")
+						.form__field.field.--required.--tel
+							.field__wrap
+								.field__icon
+									img(src="_/uploads/icons/tel-gray.svg", alt="")
+								input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
+					.form__btn.btn.--primary Получить консультацию
+					.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
+		.consult__bg.bg-img
+			picture
+				source(srcset="/_/uploads/consult-bg.webp" type="image/webp")
+				img(src="/_/uploads/consult-bg.jpg" alt="" loading="lazy")
+
+				

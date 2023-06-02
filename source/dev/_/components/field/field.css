@@ -1,18 +1,40 @@
-:root {
-  --font-main: "Gilroy", sans-serif;
-  --font-size-main: 16px;
-  --color-primary: #FBCC50;
-  --color-secondary: #4FA559;
-  --grad-primary: linear-gradient(227.75deg, #F9E3AE 5%, #FCC532 76%);
-  --grad-primary-hover: linear-gradient(227.75deg, #FCC532 5%, #FCC532 76%);
-  --color-black: #1B1B1B;
-  --color-white: #FFFFFF;
-  --color-gray: #F5F5F5;
-  --color-gray-2: #818181;
-  --color-dark: #202020;
-  --color-text: #333333;
-  --transition: .3s ease-in-out;
-  --border-sm: 8px;
-  --border-md: 10px;
-  --border: 16px;
+.field {
+  width: 100%;
+  display: block;
+  position: relative;
+  transition: var(--transition);
+}
+.field__wrap {
+  position: relative;
+}
+.field__icon {
+  z-index: 1;
+  top: 50%;
+  left: 28px;
+  max-width: 20px;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.field__area {
+  width: 100%;
+  font-size: 18px;
+  padding: 35px 24px 35px 66px;
+  box-shadow: inset 0px 1px 9px rgba(225, 225, 225, 0.45);
+  background: #F4F8FB;
+  color: var(--color-black);
+  font-family: var(--font-main);
+  transition: var(--transition);
+  border-radius: var(--border-sm);
+  position: relative;
+}
+.field__area::placeholder {
+  opacity: 1;
+  color: #828B9A;
+  transition: var(--transition);
+}
+.field__area:focus::placeholder {
+  opacity: 0;
+}
+.field.--error .field__area {
+  color: red;
 }

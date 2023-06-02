@@ -1,2 +1,36 @@
-@import ../../sys/sass/vars
-
+.field
+  width: 100%
+  display: block
+  position: relative
+  transition: var(--transition)
+  &__wrap
+    position: relative
+  &__icon
+    z-index: 1
+    top: 50%
+    left: 28px
+    max-width: 20px
+    transform: translateY(-50%)
+    position: absolute
+  &__area
+    width: 100%
+    font-size: 18px
+    padding: 35px 24px 35px 66px
+    box-shadow: inset 0px 1px 9px rgba(225, 225, 225, 0.45)
+    background: #F4F8FB
+    color: var(--color-black)
+    font-family: var(--font-main)
+    transition: var(--transition)
+    border-radius: var(--border-sm)
+    position: relative
+    &::placeholder
+      opacity: 1
+      color: #828B9A
+      transition: var(--transition)
+    &:focus
+      &::placeholder
+        opacity: 0
+  &.--error
+    .field
+      &__area
+        color: red
