@@ -125,4 +125,28 @@ block content
 				source(srcset="/_/uploads/consult-bg.webp" type="image/webp")
 				img(src="/_/uploads/consult-bg.jpg" alt="" loading="lazy")
 
-				
+	.type
+		.case
+			.type__title.h2.tac #[h2 #[strong Идеально подходит] #[br]для следующих видов работ ]
+			.type__list
+				mixin type(img, name, text)
+					.type__item
+						.type__img.cover
+							img(src=img, alt="")
+						.type__info.tac
+							.type__name.h5=name
+							.type__text!=text
+							a.type__btn.btn.--primary.--md(data-fancybox data-src="#modal-price" href="javascript:;") Рассчитать цену
+				+type('_/uploads/type/type-1.jpg', 'Для пола', 'Используется для выравнивания полов под линолеум, паркет <br>или покраску.')
+				+type('_/uploads/type/type-2.jpg', 'Для лазерной резки', 'Обладает ровной поверхностью <br>для создания сложных деталей')
+				+type('_/uploads/type/type-3.jpg', 'Для потолка', 'Подходит для создания ровной <br>и привлекательной поверхности <br>потолка')
+				+type('_/uploads/type/type-4.jpg', 'Для обшивки', ' Эстетичный и прочный облицовочный материал для различных <br>поверхностей')
+				+type('_/uploads/type/type-5.jpg', 'Для опалубки', 'Подходит для строительства <br>и формирования опалубочных конструкций')
+				+type('_/uploads/type/type-6.jpg', 'Для кровельных работ', 'Обеспечивает защиту кровли от влаги <br>и других внешних воздействий')
+				+type('_/uploads/type/type-7.jpg', 'Для лодок', 'Фанера для строительства лодок обладает главным качеством – водостойкостью')
+				+type('_/uploads/type/type-8.jpg', 'Для хоз.построек', 'Обладает высокой стойкостью к погодным условиям и обеспечивает долговечность построек')
+		.type__decor
+			.type__decor-item.decor-item
+				img(src="_/uploads/decor/decor-6.png", alt="")
+			.type__decor-item.decor-item
+				img(src="_/uploads/decor/decor-7.png", alt="")
