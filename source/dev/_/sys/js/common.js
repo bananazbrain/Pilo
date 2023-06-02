@@ -1,97 +1,69 @@
 const html = document.querySelector('html');
 const body = document.querySelector('body');
 const inner = document.querySelector('.inner');
-const mailPattern = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 
-document.addEventListener('DOMContentLoaded', function () {
-  // FANCYBOX SETUP
-  // Fancybox.bind("[data-fancybox]", {
-  //   dragToClose: false,
-  //   autoFocus: false,
-  // });
-
-  // CHECK INIT
-  let checks = document.querySelectorAll('.check');
-  if (checks) {
-    checks.forEach((check) => {
-      new Check(check);
-    });
+window.onload = () => {
+  // HEADER
+  let header = document.querySelector('.header');
+  if (header) {
+    function headerFix() {
+      if (document.body.scrollTop >= 20 || document.documentElement.scrollTop >= 20) {
+        header.classList.add('--scroll');
+      }
+      else {
+        header.classList.remove('--scroll');
+      }
+    }
+    headerFix();
+    document.addEventListener('scroll', headerFix);
   }
 
-  // SELECT INIT
-  var selects = document.querySelectorAll('.select');
-  selects.forEach(select => {
-    new Select(select);
+  // SIDE-PANEL
+  let sidePanel = document.querySelector('.side-panel');
+  let sidePanelClose = document.querySelector('.side-panel__close');
+
+  if (sidePanel) {
+    sidePanelClose.addEventListener('click', () => {
+      sidePanel.classList.add('--closed');
+    })
+  }
+
+  // FANCYBOX SETUP
+  Fancybox.bind("[data-fancybox]", {
+    defaultDisplay: 'flex',
+    dragToClose: false,
+    autoFocus: false,
   });
 
-  // ANIMATION
-  let anBlocks = document.querySelectorAll('.an');
-
-  function animatedBlocks() {
-    let Y = window.scrollY;
-    let visibleHeight = window.innerHeight - 100;
-    anBlocks.forEach((block) => {
-      if (!block.classList.contains('--loaded')) {
-        let timeout = block.getAttribute('data-timeout');
-        if (timeout) {
-          block.style.transitionDelay = timeout;
-        }
-        if (block.getBoundingClientRect().top < visibleHeight) {
-          block.classList.add('--loaded');
-        }
-      }
-    });
-  }
-
-  setTimeout(() => {
-    animatedBlocks();
-    document.addEventListener('scroll', () => {
-      animatedBlocks();
-    });
-  }, 500);
-
-  // HEADER MENU NAV
-  let menuHam = document.querySelector('.ham');
-  let menuNav = document.querySelector('.header');
-
-  if (menuHam) {
-    for (let i = 0; i < 3; i++) {
-      let div = document.createElement('div');
-      menuHam.append(div);
-    }
-
-    menuHam.addEventListener('click', () => {
-      menuHam.classList.toggle('--toggle');
-      menuNav.classList.toggle('--toggle');
-      html.classList.toggle('overflow-disable');
-      body.classList.toggle('overflow-disable');
-      inner.classList.toggle('overflow-disable');
-    });
-  }
-
-  // SLIDER
-  let sampleSlider = document.querySelector('.sample__slider');
-
-  if (sampleSlider) {
-    let sampleSliderSwiper = new Swiper(sampleSlider, {
-      slidesPerView: 1,
-      spaceBetween: 1,
+  // GALLERY SLIDER
+  let gallerySlider = document.querySelector('.gallery__slider');
+  if (gallerySlider) {
+    let gallerySliderSwiper = new Swiper(gallerySlider, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
       speed: 900,
       navigation: {
-        prevEl: '.sample__arrow.swiper-button-prev',
-        nextEl: '.sample__arrow.swiper-button-next',
+        prevEl: '.gallery__slider-arrow.swiper-button-prev',
+        nextEl: '.gallery__slider-arrow.swiper-button-next',
       },
       pagination: {
-        el: '.sample__pagination.swiper-pagination',
+        el: '.gallery__slider-pagination.swiper-pagination',
         type: 'bullets',
         clickable: true,
       },
+      breakpoints: {
+        1025: {
+          spaceBetween: 63,
+          slidesOffsetBefore: -85,
+          centeredSlides: true,
+          initialSlide: 1,
+        },
+      }
     });
   }
 
   // MAP
   let map = document.querySelector('#map');
-
   if (map && ymaps) {
     ymaps.ready(mapInit);
 
@@ -117,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
       let placemark = new ymaps.Placemark(mapPlaceholder, {
       }, {
         iconLayout: 'default#image',
-        iconImageHref: '_/uploads/icons/placemark-blue.svg',
-        iconImageSize: [28, 33],
+        iconImageHref: '/_/uploads/icons/placemark.svg',
+        iconImageSize: [36, 52],
       }, {});
       ymap.geoObjects.add(placemark);
 
@@ -127,10 +99,12 @@ document.addEventListener('DOMContentLoaded', function () {
       function setMapPostion() {
         let dw = window.innerWidth;
 
-        if (dw > 1280) {
-          ymap.setCenter([mapPosition[0], mapPosition[1]]);
-        } else if (dw <= 1280 && dw > 767) {
+        if (dw >= 1281) {
           ymap.setCenter([mapPosition[0], mapPosition[1] - -0.004]);
+        } else if (dw <= 1024 && dw >= 768) {
+          ymap.setCenter([mapPosition[0] - 0.002, mapPosition[1] - -0.003]);
+        } else if (dw <= 767) {
+          ymap.setCenter([mapPosition[0] - 0.002, mapPosition[1]]);
         } else {
           ymap.setCenter(mapPosition);
         }
@@ -146,30 +120,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // VALIDATOR
   let fields = document.querySelectorAll('.field');
   fields.forEach((field) => {
-    field.wrap = field.querySelector('.field__wrap');
     field.area = field.querySelector('.field__area');
 
     field.addEventListener('focusin', () => {
-      field.classList.add('--focus');
       field.classList.remove('--error');
     })
     field.addEventListener('focusout', () => {
-      field.classList.remove('--focus');
     })
-
-    field.area.addEventListener('change', () => {
-      if (field.area.value.length >= 1) {
-        field.classList.add('--filled');
-      } else {
-        field.classList.remove('--filled');
-      }
-    });
 
     if (field.classList.contains('--name')) {
       field.area.addEventListener('input', () => {
         field.area.value = field.area.value.replace(/[^\D]/g, '');
       });
-
     } else if (field.classList.contains('--tel')) {
       field.area.mask = IMask(field.area, {
         mask: '+{7} (000) 000-00-00',
@@ -185,25 +147,11 @@ document.addEventListener('DOMContentLoaded', function () {
           lazy: true
         })
       })
-    } else if (field.classList.contains('--date')) {
-      field.area.mask = IMask(field.area, {
-        mask: Date,
-        lazy: false,
-        min: new Date(Date.now()),
-      });
-      field.area.addEventListener('input', () => {
-        if (Date.length >= 1) {
-          field.classList.add('--filled');
-        } else {
-          field.classList.remove('--filled');
-        }
-      });
-
-    } else {
+    } {
       field.area.addEventListener('field', () => {
       });
     }
-  });
+  })
 
   let validateForms = document.querySelectorAll('form');
   let modalThanks = document.getElementById('modal-thanks');
@@ -211,24 +159,8 @@ document.addEventListener('DOMContentLoaded', function () {
     validateForms.forEach((form) => {
       let btnSubmit = form.querySelector('.btn');
       let fieldsRequired = form.querySelectorAll('.field.--required');
-      let checksRequired = form.querySelectorAll('.check.--required');
-      let selectsRequired = form.querySelectorAll('.select.--required');
       let popupModalForm = form.querySelector('.modal__form');
       let popupSendOkAttr = form.getAttribute('data-message-ok');
-
-      // SELECT VALIDATOR
-      if (selectsRequired.length > 0) {
-
-        selectsRequired.forEach((select) => {
-          select.parse = select.querySelector('select');
-          select.error = select.querySelector('.select__value');
-          select.addEventListener('click', () => {
-            if (select.classList.contains('--error')) {
-              select.classList.remove('--error');
-            }
-          })
-        })
-      }
 
       btnSubmit.addEventListener('click', (event) => {
         let errors = 0;
@@ -237,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
           fieldsRequired.forEach((field) => {
             let value = field.area.value;
 
+            // field name
             if (field.classList.contains('--name')) {
               if (value.length < 2) {
                 errors++;
@@ -246,53 +179,14 @@ document.addEventListener('DOMContentLoaded', function () {
               }
             }
 
+            // field tel
             if (field.classList.contains('--tel')) {
-              if (value.length < 18) {
+              if (value.length < 11) {
                 errors++;
                 field.classList.add('--error');
               } else {
                 field.classList.remove('--error');
               }
-            }
-
-            if (field.classList.contains('--email')) {
-              if (!mailPattern.test(value)) {
-                errors++;
-                field.classList.add('--error');
-              } else {
-                field.classList.remove('--error');
-              }
-            }
-
-            if (field.classList.contains('--date')) {
-              if (field.area.mask.unmaskedValue.length < 10) {
-                errors++;
-                field.classList.add('--error');
-              } else {
-                field.classList.remove('--error');
-              }
-            }
-
-          })
-        }
-
-        if (checksRequired.length > 0) {
-          checksRequired.forEach((check) => {
-            if (check.input.getAttribute('checked') != 'checked') {
-              errors++;
-              check.classList.add('--error');
-            }
-            else {
-              check.classList.remove('--error');
-            }
-          })
-        }
-
-        if (selectsRequired.length > 0) {
-          selectsRequired.forEach((select) => {
-            if (!select.parse.querySelector('option[selected]')) {
-              errors++;
-              select.classList.add('--error');
             }
           })
         }
@@ -300,19 +194,16 @@ document.addEventListener('DOMContentLoaded', function () {
         if (errors == 0) {
           let xhr = new XMLHttpRequest();
           let formData = new FormData(form);
-          xhr.open('POST', 'order.php');
+          xhr.open('POST', '/order.php');
           xhr.send(formData);
 
           xhr.onload = function () {
-            if (xhr.response == "1") {
-              Fancybox.close();
+            Fancybox.close();
 
-              Fancybox.show([{
-                src: '#modal-thanks',
-                type: 'inline'
-              }]);
-
-            }
+            Fancybox.show([{
+              src: '#modal-thanks',
+              type: 'inline'
+            }]);
           }
           event.preventDefault();
 
@@ -322,4 +213,4 @@ document.addEventListener('DOMContentLoaded', function () {
       })
     })
   }
-})
+}

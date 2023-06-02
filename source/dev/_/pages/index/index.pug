@@ -4,4 +4,52 @@ block vars
 		title = "Пиломир"
 
 block content
-	
+	.side-panel
+		.side-panel__wrap
+			.side-panel__list
+				a.side-panel__item(data-fancybox data-src="#modal-price" href="javascript:;")
+					.side-panel__icon
+						img(src="_/uploads/icons/calc.svg", alt="")
+					.side-panel__text Рассчитать стоимость
+				a.side-panel__item(data-fancybox data-src="#modal-consult" href="javascript:;")
+					.side-panel__icon
+						img(src="_/uploads/icons/consult.svg", alt="")
+					.side-panel__text Получить консультацию
+				a.side-panel__item(href="https://wa.me/79175030777" target="_blank")
+					.side-panel__icon
+						img(src="_/uploads/icons/wh-2.svg", alt="")
+					.side-panel__text WhatsApp
+			.side-panel__close
+
+	.intro.bg
+		.case
+			.intro__wrap.row
+				.intro__info
+					.intro__label оптом и в розницу
+					.intro__title.h1 #[h1 #[strong Фанера по низким ценам #[br]с доставкой в день заказа] #[br]по Москве и области]
+					.intro__subtitle.h4 со склада производителя #[br]любого сорта и размера
+					.intro__act.row
+						a.intro__btn.btn.--primary.--img(data-fancybox data-src="#modal-price" href="javascript:;") Узнать стоимость
+							.btn__img
+								img(src="/_/uploads/price.png" srcset="/_/uploads/price-2x.png 2x", alt="")
+						.intro__desc Оставьте заявку и получите точный расчет под ваш объем #[br]#[strong в течение 5 минут]
+				.intro__preview
+					.intro__img
+						img(src="/_/uploads/intro-img.png" srcset="/_/uploads/intro-img-2x.png 2x", alt="")
+					.intro__note
+						.intro__note-icon
+							img(src="_/uploads/icons/check-green.svg", alt="")
+						.intro__note-text.t1.tac
+							p Наша фанера имеет #[strong все необходимые сертификаты.]
+							p Она #[strong абсолютно безопасна] для вашего здоровья
+		.intro__bg.bg-img
+			picture
+				source(srcset="/_/uploads/intro-bg.webp" type="image/webp")
+				img(src="/_/uploads/intro-bg.jpg" alt="" loading="lazy")
+		.intro__decor
+			.intro__decor-item.decor-item
+				img(src="_/uploads/decor/decor-1.png", alt="")
+			.intro__decor-item.decor-item
+				img(src="_/uploads/decor/decor-2.png", alt="")
+			.intro__decor-item.decor-item
+				img(src="_/uploads/decor/decor-3.png", alt="")

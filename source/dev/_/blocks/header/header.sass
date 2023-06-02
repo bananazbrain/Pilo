@@ -1,17 +1,27 @@
 .header
 	width: 100%
 	z-index: 100
-	padding: 24px
+	padding: 20px 0
 	position: fixed
+	transition: var(--transition)
 	&__wrap
 		align-items: center
 		justify-content: space-between
 	&__logo
 		max-width: 346px
+	&__btn
+		left: 50%
+		opacity: 0
+		max-width: 300px
+		margin-left: 50px
+		transform: translateX(-50%)
+		pointer-events: none
+		position: absolute
 	&__map
 		width: 100%
 		max-width: 225px
 		align-items: center
+		transition: var(--transition)
 		&-img
 			width: 64px
 			height: 64px
@@ -21,6 +31,9 @@
 			width: calc( 100% - 64px )
 			padding-left: 22px
 	&__socials
+		transition: var(--transition)
+		&-text
+			font-size: 12px
 		&-list
 			gap: 12px
 			margin-top: 8px
@@ -43,12 +56,15 @@
 				background: darken(#12C868, 5%)
 	&__contacts
 		gap: 8px
+		width: 100%
+		max-width: 225px
 		display: flex
 		align-items: flex-end
 		flex-direction: column
 		&-time
 			font-size: 12px
 			position: relative
+			transition: var(--transition)
 			&:before
 				left: -10px
 				top: 5px
@@ -63,7 +79,7 @@
 			font-weight: 700
 			position: relative
 			&:before
-				top: 5px
+				top: 6px
 				width: 17px
 				height: 17px
 				left: auto
@@ -75,6 +91,19 @@
 		&-callback
 			font-size: 14px
 			font-weight: 600
+
+	&.--scroll
+		background: var(--color-white)
+		box-shadow: 0px 44px 92px rgba(0, 0, 0, 0.07)
+		.header
+			&__btn
+				opacity: 1
+				pointer-events: all
+			&__map, &__socials
+				opacity: 0
+			&__contacts
+				&-time, &-callback
+					opacity: 0
 
 @media screen and (max-width: 1220px)
 	// .header

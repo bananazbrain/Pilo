@@ -3,11 +3,9 @@
 @import reset
 @import grid
 
-// @import ../../components/btn/btn
-// @import ../../components/field/field
-// @import ../../components/check/check
-// @import ../../components/slider/slider
-// @import ../../components/modal/modal
+@import ../../components/btn/btn
+@import ../../components/field/field
+@import ../../components/modal/modal
 
 // TYPOGRAPHY	
 .h1
@@ -86,7 +84,7 @@
 			left: 32px
 			top: 50%
 			width: 1px
-			height: calc( 100% - 20px )
+			height: 100%
 			transform: translateY(-50%)
 			background: #D3D3D3
 			position: absolute
@@ -103,6 +101,9 @@
 .tel
 	font-feature-settings: 'tnum' on, 'lnum' on
 
+.decor-item
+	position: absolute
+
 // ANIMATION
 .fadeIn
 	opacity: 0
@@ -110,3 +111,156 @@
 		opacity: 1
 		transition: 1.5s
 		transition-property: opacity
+
+.side-panel
+	top: 50%
+	right: 0
+	z-index: 50
+	min-width: 120px
+	transform: translateY(-50%)
+	transition: var(--transition)
+	position: fixed
+	&__list
+		gap: 8px
+		display: flex
+		align-items: flex-end
+		flex-direction: column
+	&__item
+		width: 110px
+		min-height: 100px
+		color: var(--color-white)
+		background: linear-gradient(236.26deg, #DA9F00 -0.24%, #FAC22B -0.23%, #DA9F00 73.63%)
+		border-radius: var(--border) 0 0 var(--border)
+		display: flex
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		text-align: center
+		&:hover
+			width: 120px
+	a[href^="https://wa.me/"]
+		background: #12C868
+	&__text
+		font-size: 12px
+		margin-top: 8px
+	&__close
+		width: 35px
+		height: 35px
+		left: 50%
+		margin-top: 12px
+		margin-left: 8px
+		border-radius: 50%
+		transform: translateX(-50%)
+		background: linear-gradient(227.75deg, #DA9F00 5.11%, #FCC532 76.14%)
+		transition: var(--transition)
+		position: absolute
+		cursor: pointer
+		&:before
+			top: 50%
+			left: 50%
+			width: 12px
+			height: 12px
+			transform: translate(-50%, -50%)
+			background: url('../../uploads/icons/close.svg') no-repeat
+			background-size: contain
+			position: absolute
+			content: ""
+	&.--closed
+		opacity: 0
+		visibility: hidden
+		pointer-events: none
+
+.intro
+	padding: 146px 0 170px
+	&__info
+		width: 100%
+		max-width: 690px
+	&__label
+		font-weight: 600
+		padding: 10px 25px
+		margin-bottom: 14px
+		color: #A1AEC5
+		background: rgba(192, 211, 242, 0.4)
+		border-radius: var(--border)
+		width: max-content
+	&__title
+		margin-bottom: 18px
+	&__subtitle
+		padding-left: 78px
+		position: relative
+		&:before
+			left: 0
+			top: 18px
+			width: 55px
+			height: 3px
+			background: var(--color-secondary)
+			position: absolute
+			content: ""
+	&__act
+		margin-top: 42px
+	&__btn
+		max-width: 358px
+	&__desc
+		max-width: 230px
+		margin-left: 100px
+		margin-top: -30px
+		line-height: 22px
+		font-size: 14px
+		position: relative
+		&:before
+			left: -58px
+			bottom: 30px
+			width: 78px
+			height: 18px
+			background: url('../../uploads/icons/arrow-decor.svg') no-repeat
+			background-size: contain
+			position: absolute
+			content: ""
+	&__preview
+		width: calc( 100% - 690px )
+		display: flex
+		flex-direction: column
+	&__img
+		width: 100%
+		position: absolute
+	&__note
+		z-index: 1
+		left: 28px
+		margin-bottom: 28px
+		display: flex
+		margin-top: auto
+		align-items: center
+		justify-content: center
+		flex-direction: column
+		position: relative
+		&:before
+			top: 50%
+			left: 50%
+			z-index: -1
+			width: 230px
+			height: 230px
+			transform: translate(-50%, -50%)
+			background: url('../../uploads/icons/note-bg.svg') no-repeat
+			background-size: contain
+			position: absolute
+			content: ""
+		&-icon
+			margin-bottom: 14px
+		&-text
+			width: 100%
+			max-width: 160px
+			p
+				margin-bottom: 8px
+				&:last-child
+					margin-bottom: 0
+	&__decor
+		&-item
+			&:nth-of-type(1)
+				left: 0
+				bottom: 0
+			&:nth-of-type(2)
+				right: 0
+				bottom: 0
+			&:nth-of-type(3)
+				top: 0
+				right: 0
