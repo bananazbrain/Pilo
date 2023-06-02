@@ -411,6 +411,15 @@ path, circle, rect, line {
   position: absolute;
 }
 
+.decor-bottom {
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  z-index: -1;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
 .fadeIn {
   opacity: 0;
 }
@@ -646,4 +655,25 @@ path, circle, rect, line {
   font-size: 14px;
   line-height: 24px;
   color: var(--color-gray-2);
+}
+
+.quiz {
+  padding: 40px 0 118px;
+}
+.quiz__title {
+  margin-bottom: 40px;
+}
+.quiz__wrap {
+  min-height: 710px;
+  background: var(--color-white);
+  border-radius: var(--border);
+  box-shadow: 0px 16px 92px rgba(0, 0, 0, 0.07);
+}
+.quiz__decor-item:nth-of-type(1) {
+  top: -50px;
+  left: -350px;
+}
+.quiz__decor-item:nth-of-type(2) {
+  bottom: 220px;
+  right: -300px;
 }
