@@ -447,6 +447,58 @@
 		margin-left: auto
 		position: relative
 
+.qual
+	padding: 55px 0 65px
+	&__title
+		margin-bottom: 45px
+	&__img
+		left: 50%
+		max-width: 568px
+		transform: translateX(-50%)
+		position: absolute
+	&__list
+		gap: 30px 0
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+	&__item
+		width: 100%
+		padding: 24px
+		max-width: 320px
+		border-radius: 24px
+		background: var(--color-white)
+		box-shadow: 0px 44px 92px rgba(0, 0, 0, 0.13)
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		flex-direction: column
+		&:nth-of-type(even)
+			margin-left: auto
+		&:nth-of-type(1), &:nth-of-type(5)
+			margin-left: 46px
+		&:nth-of-type(2), &:nth-of-type(6)
+			margin-right: 46px
+	&__icon
+		margin-bottom: 4px
+	&__name
+		font-size: 18px
+		font-weight: 700
+		line-height: 21px
+		min-height: 42px
+		color: var(--color-secondary)
+		display: flex
+		align-items: center
+		justify-content: center
+	&__text
+		font-size: 14px
+		line-height: 24px
+		color: var(--color-text)
+	&__btn
+		max-width: 400px
+		margin-top: -20px
+		margin-left: auto
+		margin-right: auto
+
 .type
 	padding: 54px 0 88px
 	position: relative
@@ -697,3 +749,7 @@
 
 .ymaps-2-1-79-copyrights-pane
 	display: none
+
+.ymaps-2-1-79-ground-pane
+	filter: grayscale(100%)
+	-webkit-filter: grayscale(100%)

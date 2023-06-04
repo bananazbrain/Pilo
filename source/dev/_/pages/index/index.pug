@@ -125,6 +125,32 @@ block content
 				source(srcset="/_/uploads/consult-bg.webp" type="image/webp")
 				img(src="/_/uploads/consult-bg.jpg" alt="" loading="lazy")
 
+	.qual.bg
+		.case
+			.qual__title.h2.tac #[h2 #[strong Качественная фанера –] #[br]лучший выбор для строительства]
+			.qual__wrap
+				.qual__img
+					img(src="/_/uploads/product.png" srcset="/_/uploads/product-2x.png 2x", alt="")
+				.qual__list
+					mixin qual(img, name, text)
+						.qual__item
+							.qual__icon
+								img(src=img, alt="")
+							.qual__info
+								.qual__name!=name
+								.qual__text!=text
+					+qual('_/uploads/qual-1.svg', 'Безопасна <br>для всей семьи', 'Не выделяет никаких вредных веществ, которые могут навредить здоровью человека')
+					+qual('_/uploads/qual-2.svg', 'Устойчива к влаге', 'Фанера не погнется или не разрушится при воздействии влаги, что делает <br>ее подходящей для влажных условий')
+					+qual('_/uploads/qual-3.svg', 'Сделана из <br>натуральных материалов', 'В составе фанеры используются только натуральная основа. В основном – береза.')
+					+qual('_/uploads/qual-4.svg', 'Обладает высокой <br>прочностью', 'Многослойная структура фанеры обеспечивает высокую прочность <br>и устойчивость к деформациям')
+					+qual('_/uploads/qual-5.svg', 'Имеет эстетический вид', 'Фанеру можно окрасить, лакировать <br>и шлифовать, достигая желаемого внешнего вида')
+					+qual('_/uploads/qual-6.svg', 'Выгоднее аналогов', 'Фанера является более <br>доступным материалом <br>по сравнению с альтернативами')
+				.qual__btn.btn.--primary Заказать фанеру
+		.qual__bg.bg-img
+			picture
+				source(srcset="/_/uploads/qual-bg.webp" type="image/webp")
+				img(src="/_/uploads/qual-bg.jpg" alt="" loading="lazy")
+
 	.type
 		.case
 			.type__title.h2.tac #[h2 #[strong Идеально подходит] #[br]для следующих видов работ ]
@@ -220,7 +246,7 @@ block content
 							.delivery__icon
 								img(src="_/uploads/icons/check-bg.svg", alt="")
 							.delivery__text При необходимости, вы можете #[strong приехать #[br]за заказом самостоятельно] и оплатить на месте
-					.delivery__btn.btn.--primary Узнать стоимость фанеры с доставкой
+					a.delivery__btn.btn.--primary(data-fancybox data-src="#modal-price" href="javascript:;") Узнать стоимость фанеры с доставкой
 
 	.why
 		.case
@@ -294,7 +320,7 @@ block content
 				source(srcset="/_/uploads/order-2.webp" type="image/webp")
 				img(src="/_/uploads/order-2.jpg" alt="" loading="lazy")
 
-	.contacts
+	.contacts#contacts
 		.case
 			.contacts__wrap
 				.contacts__info

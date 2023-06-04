@@ -2,4 +2,57 @@ include ../../sys/pug/vars
 
 footer.footer
 	.case
-		
+
+.modal.--static#modal-callback
+	.modal__form.form
+		.form__title.h3.tac Заказать звонок
+		.form__text.h5.tac Введите телефон, наш специалист свяжется с вами в течение 5 минут для уточнения всех деталей
+		form.form__fields
+			.form__field.field.--required.--name
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/person-gray.svg", alt="")
+					input.field__area(type="name" name="name" placeholder="Как к вам обращаться*")
+			.form__field.field.--required.--tel
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/tel-gray.svg", alt="")
+					input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
+		.form__btn.btn.--primary Отправить заявку
+		.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
+
+.modal.--static#modal-price
+	.modal__form.form
+		.form__title.h3.tac Узнать стоимость
+		.form__text.h5.tac Введите телефон, наш специалист свяжется с вами в течение 5 минут для уточнения всех деталей
+		form.form__fields
+			.form__field.field.--required.--name
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/person-gray.svg", alt="")
+					input.field__area(type="name" name="name" placeholder="Как к вам обращаться*")
+			.form__field.field.--required.--tel
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/tel-gray.svg", alt="")
+					input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
+		.form__btn.btn.--primary Узнать стоимость
+		.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
+
+.modal.--static#modal-consult
+	.modal__form.form
+		.form__title.h3.tac Получить консультацию
+		.form__text.h5.tac Введите телефон, наш специалист свяжется с вами в течение 5 минут для уточнения всех деталей
+		form.form__fields
+			.form__field.field.--required.--name
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/person-gray.svg", alt="")
+					input.field__area(type="name" name="name" placeholder="Как к вам обращаться*")
+			.form__field.field.--required.--tel
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/tel-gray.svg", alt="")
+					input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
+		.form__btn.btn.--primary Получить консультацию
+		.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]

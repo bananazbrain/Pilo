@@ -1,2 +1,38 @@
-@import ../../sys/sass/vars
+.modal
+  padding: 0
+  width: 100%
+  background: none
+  display: none
+  .f-button.is-close-btn
+    top: 18px
+    right: 18px
+  &__form
+    .form
+      &__title
+        margin-bottom: 16px
+      &__fields
+        margin-top: 16px
+      &__btn
+        margin-top: 24px
+  &.--static
+    max-width: 500px
+    border-radius: var(--border)
 
+.f-button
+  opacity: 1 !important
+  background: none !important
+  svg
+    stroke: var(--color-black)
+  &:hover
+    svg
+      stroke: var(--color-primary)
+
+@media screen and (max-width: 580px)
+  .modal
+    &__form
+      .form
+        &__btn
+          font-size: 14px
+    &.--static
+      padding: 24px 16px
+      max-width: 350px
