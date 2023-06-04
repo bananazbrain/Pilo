@@ -35,6 +35,9 @@
 .field__area:focus::placeholder {
   opacity: 0;
 }
+.field.--md .field__area {
+  padding: 30px 24px 30px 66px;
+}
 .field.--error .field__area {
   color: red;
 }

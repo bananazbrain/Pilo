@@ -53,8 +53,8 @@ window.onload = () => {
       },
       breakpoints: {
         1025: {
-          spaceBetween: 63,
-          slidesOffsetBefore: -85,
+          spaceBetween: 76,
+          slidesOffsetBefore: -100,
           centeredSlides: true,
           initialSlide: 1,
         },

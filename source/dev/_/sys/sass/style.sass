@@ -6,6 +6,7 @@
 @import ../../components/btn/btn
 @import ../../components/field/field
 @import ../../components/modal/modal
+@import ../../components/slider/slider
 
 // TYPOGRAPHY	
 .h1
@@ -97,6 +98,8 @@
 	text-underline-offset: 2px
 	&:hover
 		text-decoration-color: transparent
+	&.--primary
+		color: var(--color-primary)
 
 .inline
 	display: inline
@@ -487,3 +490,210 @@
 			&:nth-of-type(2)
 				top: 0
 				right: 0
+
+.order
+	padding: 36px 0 48px
+	color: var(--color-white)
+	&:before
+		inset: 0
+		z-index: -1
+		width: 100%
+		height: 100%
+		background: linear-gradient(75.56deg, #4FA559 29.39%, #6DD37A 108.77%)
+		position: absolute
+		content: ""
+	&__title
+		font-weight: 700
+		margin-bottom: 14px
+	&__subtitle
+		font-size: 26px
+		margin-bottom: 48px
+	&__fields
+		gap: 24px
+		display: grid
+		justify-content: center
+		grid-template-columns: 426px 364px
+	&__btn
+		font-size: 14px
+	&__policy
+		margin-top: 24px
+		font-size: 14px
+		line-height: 18px
+		a
+			font-size: 14px
+	&__bg
+		opacity: 16%
+
+.why
+	padding: 65px 0 102px
+	position: relative
+	&__title
+		font-weight: 700
+		margin-bottom: 50px
+	&__list
+		margin: -16px
+	&__item
+		padding: 36px
+		margin: 16px
+		width: calc( 100% / 3 - 32px)
+		border-radius: var(--border)
+		overflow: hidden
+		&.--w2
+			width: calc( 50% - 32px)
+			min-height: 295px
+		&:nth-of-type(1)
+			.why
+				&__img
+					right: -46px
+		&:nth-of-type(3)
+			.why
+				&__img
+					right: -24px
+		&:nth-of-type(5)
+			.why
+				&__img
+					bottom: 50px
+	&__info
+		z-index: 1
+		max-width: 250px
+		position: relative
+	&__name
+		font-weight: 700
+		margin-bottom: 20px
+	&__text
+		line-height: 27px
+	&__img
+		right: 0
+		bottom: 0
+		position: absolute
+	&__decor
+		&-item
+			&:nth-of-type(1)
+				left: 0
+				bottom: 0
+			&:nth-of-type(2)
+				right: 0
+				bottom: 0
+				transform: scale(-1, 1)
+			&:nth-of-type(3)
+				left: 0
+				bottom: 150px
+				max-width: 160px
+				transform: rotate(10deg)
+			&:nth-of-type(4)
+				top: 280px
+				right: -10px
+				max-width: 160px
+
+.gallery
+	padding: 52px 0 56px
+	background: var(--color-gray)
+	&__title
+		margin-bottom: 54px
+	&__slider
+		overflow: visible
+		&-wrap
+			height: 447px
+			align-items: center
+		&-slide
+			opacity: 0
+			height: 313px
+			width: 478px
+			border-radius: var(--border)
+			transition: var(--transition)
+			overflow: hidden
+			&.swiper-slide-active
+				width: 680px
+				height: 447px
+			&.swiper-slide-prev, &.swiper-slide-active, &.swiper-slide-next
+				opacity: 1
+		&-arrow
+			&.swiper-button-prev
+				left: 225px
+			&.swiper-button-next
+				right: 225px
+
+.delivery
+	padding: 65px 0
+	&__img
+		height: 630px
+		margin-left: -362px
+		border-radius: 48px
+		overflow: hidden
+	&__info
+		width: 100%
+		max-width: 630px
+		padding-top: 30px
+		padding-left: 74px
+		margin-left: auto
+	&__title
+		margin-bottom: 38px
+	&__list
+		gap: 36px
+		margin-left: 10px
+		display: flex
+		flex-direction: column
+	&__item
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	&__icon
+		width: 41px
+	&__text
+		width: calc( 100% - 41px )
+		padding-left: 28px
+		font-size: 18px
+		line-height: 22px
+	&__btn
+		margin-top: 64px
+
+.contacts
+	padding: 125px 0 50px
+	position: relative
+	&__wrap
+		z-index: 2
+		max-width: 682px
+		margin-left: auto
+		position: relative
+	&__info
+		padding: 48px 70px 84px
+		color: var(--color-white)
+		border-radius: var(--border)
+		background: var(--color-secondary)
+		a
+			color: var(--color-white)
+	&__title
+		margin-bottom: 24px
+	&__list
+		gap: 12px
+		display: flex
+		flex-direction: column
+	&__item
+		display: flex
+		align-items: center
+	&__icon
+		width: 19px
+		display: flex
+		justify-content: center
+	&__text
+		width: calc( 100% - 19px )
+		padding-left: 18px
+	&__img
+		height: 204px
+		max-width: 292px
+		margin-right: 34px
+		margin-top: -122px
+		margin-left: auto
+		overflow: hidden
+		border-radius: var(--border)
+
+.map
+	top: 0
+	width: 100%
+	height: 100%
+	position: absolute
+	&__area
+		height: 100%
+
+.ymaps-2-1-79-copyrights-pane
+	display: none
