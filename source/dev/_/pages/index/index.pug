@@ -104,7 +104,7 @@ block content
 					.consult__person.tac
 						.consult__person-name.h5 Никита Сивков
 						.consult__person-duty Менеджер по продажам #[br]Опыт более 10 лет
-				.consult__form.form
+				form.consult__form.form
 					.form__title.tac Заполните форму
 					.form__subtitle.h5.tac Наш специалист свяжется с вами в течение #[br]5 минут и ответит на все возникшие вопросы
 					.form__fields
@@ -181,7 +181,7 @@ block content
 		.case
 			.order__title.h2.tac #[h2 Оставьте заявку]
 			.order__subtitle.tac и мы рассчитаем ваш заказ с учетом доставки уже через 5 минут
-			.order__form
+			form.order__form
 				.order__fields
 					.order__field.field.--md.--required.--tel
 						.field__wrap
@@ -197,34 +197,32 @@ block content
 
 	.gallery
 		.case
-			.gallery__wrap
-				.gallery__title.h2.tac #[h2 #[strong С 2010 года] доставили уже более #[br]#[strong 3000 м3] фанеры по всей России]
-				.gallery__body
-					.gallery__slider.swiper
-						.gallery__slider-wrap.swiper-wrapper
-							.gallery__slider-slide.swiper-slide.cover
-								picture
-									source(srcset="/_/uploads/gallery/gallery-1.webp" type="image/webp")
-									img(src="/_/uploads/gallery/gallery-1.jpg" alt="" loading="lazy")
-							.gallery__slider-slide.swiper-slide.cover
-								picture
-									source(srcset="/_/uploads/gallery/gallery-2.webp" type="image/webp")
-									img(src="/_/uploads/gallery/gallery-2.jpg" alt="" loading="lazy")
-							.gallery__slider-slide.swiper-slide.cover
-								picture
-									source(srcset="/_/uploads/gallery/gallery-3.webp" type="image/webp")
-									img(src="/_/uploads/gallery/gallery-3.jpg" alt="" loading="lazy")
-							.gallery__slider-slide.swiper-slide.cover
-								picture
-									source(srcset="/_/uploads/gallery/gallery-1.webp" type="image/webp")
-									img(src="/_/uploads/gallery/gallery-1.jpg" alt="" loading="lazy")
-						.gallery__slider-controls
-							.gallery__slider-pagination.swiper-pagination
-							.gallery__slider-arrows
-								.gallery__slider-arrow.swiper-button-prev
-									<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21L2 11L12 1" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-								.gallery__slider-arrow.swiper-button-next
-									<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 11L0.999999 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+			.gallery__title.h2.tac #[h2 #[strong С 2010 года] доставили уже более #[br]#[strong 3000 м3] фанеры по всей России]
+			.gallery__slider.swiper
+				.gallery__slider-wrap.swiper-wrapper
+					.gallery__slider-slide.swiper-slide.cover
+						picture
+							source(srcset="/_/uploads/gallery/gallery-1.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-1.jpg" alt="" loading="lazy")
+					.gallery__slider-slide.swiper-slide.cover
+						picture
+							source(srcset="/_/uploads/gallery/gallery-2.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-2.jpg" alt="" loading="lazy")
+					.gallery__slider-slide.swiper-slide.cover
+						picture
+							source(srcset="/_/uploads/gallery/gallery-3.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-3.jpg" alt="" loading="lazy")
+					.gallery__slider-slide.swiper-slide.cover
+						picture
+							source(srcset="/_/uploads/gallery/gallery-1.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-1.jpg" alt="" loading="lazy")
+				.gallery__slider-controls
+					.gallery__slider-pagination.swiper-pagination
+					.gallery__slider-arrows
+						.gallery__slider-arrow.swiper-button-prev
+							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21L2 11L12 1" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+						.gallery__slider-arrow.swiper-button-next
+							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 11L0.999999 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
 
 	.delivery.pb0
 		.case
@@ -306,7 +304,7 @@ block content
 		.case
 			.order__title.h2.tac #[h2 Распил по вашим размерам]
 			.order__subtitle.tac Оставьте заявку и мы рассчитаем ваш заказ с учетом доставки уже через 5 минут
-			.order__form
+			form.order__form
 				.order__fields
 					.order__field.field.--md.--required.--tel
 						.field__wrap
@@ -320,11 +318,75 @@ block content
 				source(srcset="/_/uploads/order-2.webp" type="image/webp")
 				img(src="/_/uploads/order-2.jpg" alt="" loading="lazy")
 
+	.reviews
+		.case
+			.reviews__title.h2.tac #[h2 А вот, что пишут те, с кем мы уже работали]
+			.reviews__wrap
+				.reviews__slider.swiper
+					.reviews__slider-wrap.swiper-wrapper
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Михаил Аветов
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews-1.png", alt="")
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Михаил Аветов
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews-1.png", alt="")
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Михаил Аветов
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews-1.png", alt="")
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Михаил Аветов
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews-1.png", alt="")
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Михаил Аветов
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews-1.png", alt="")
+				.reviews__slider-controls
+					.reviews__slider-pagination.swiper-pagination
+					.reviews__slider-arrows
+						.reviews__slider-arrow.swiper-button-prev
+							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21L2 11L12 1" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+						.reviews__slider-arrow.swiper-button-next
+							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 11L0.999999 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+		.reviews__decor
+			.reviews__decor-item.decor-item
+				img(src="_/uploads/decor/decor-4.png", alt="")
+			.reviews__decor-item.decor-item
+				img(src="_/uploads/decor/decor-5.png", alt="")
+
 	.quest.bg
 		.case
 			.quest__title.h2.tac #[h2 Остались вопросы?]
 			.quest__subtitle.tac Оставьте заявку в форме ниже и мы свяжемся с вами #[br]в течение 15 минут, чтобы обсудить все детали
-			.quest__form.form.--w3
+			form.quest__form.form.--w3
 				.form__fields
 					.form__field.field.--required.--name
 						.field__wrap

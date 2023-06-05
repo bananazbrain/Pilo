@@ -62,6 +62,33 @@ window.onload = () => {
     });
   }
 
+  // REVIEWS SLIDER
+  let reviewsSlider = document.querySelector('.reviews__slider');
+  if (reviewsSlider) {
+    let reviewsSliderSwiper = new Swiper(reviewsSlider, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      speed: 900,
+      navigation: {
+        prevEl: '.reviews__slider-arrow.swiper-button-prev',
+        nextEl: '.reviews__slider-arrow.swiper-button-next',
+      },
+      pagination: {
+        el: '.reviews__slider-pagination.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
+      breakpoints: {
+        1025: {
+          spaceBetween: 60,
+          slidesOffsetBefore: -15,
+          centeredSlides: true,
+          initialSlide: 1,
+        },
+      }
+    });
+  }
+
   // MAP
   let map = document.querySelector('#map');
   if (map && ymaps) {
@@ -162,55 +189,55 @@ window.onload = () => {
       let popupModalForm = form.querySelector('.modal__form');
       let popupSendOkAttr = form.getAttribute('data-message-ok');
 
-      btnSubmit.addEventListener('click', (event) => {
-        let errors = 0;
+      // btnSubmit.addEventListener('click', (event) => {
+      //   let errors = 0;
 
-        if (fieldsRequired.length > 0) {
-          fieldsRequired.forEach((field) => {
-            let value = field.area.value;
+      //   if (fieldsRequired.length > 0) {
+      //     fieldsRequired.forEach((field) => {
+      //       let value = field.area.value;
 
-            // field name
-            if (field.classList.contains('--name')) {
-              if (value.length < 2) {
-                errors++;
-                field.classList.add('--error');
-              } else {
-                field.classList.remove('--error');
-              }
-            }
+      //       // field name
+      //       if (field.classList.contains('--name')) {
+      //         if (value.length < 2) {
+      //           errors++;
+      //           field.classList.add('--error');
+      //         } else {
+      //           field.classList.remove('--error');
+      //         }
+      //       }
 
-            // field tel
-            if (field.classList.contains('--tel')) {
-              if (value.length < 11) {
-                errors++;
-                field.classList.add('--error');
-              } else {
-                field.classList.remove('--error');
-              }
-            }
-          })
-        }
+      //       // field tel
+      //       if (field.classList.contains('--tel')) {
+      //         if (value.length < 11) {
+      //           errors++;
+      //           field.classList.add('--error');
+      //         } else {
+      //           field.classList.remove('--error');
+      //         }
+      //       }
+      //     })
+      //   }
 
-        if (errors == 0) {
-          let xhr = new XMLHttpRequest();
-          let formData = new FormData(form);
-          xhr.open('POST', '/order.php');
-          xhr.send(formData);
+      //   if (errors == 0) {
+      //     let xhr = new XMLHttpRequest();
+      //     let formData = new FormData(form);
+      //     xhr.open('POST', '/order.php');
+      //     xhr.send(formData);
 
-          xhr.onload = function () {
-            Fancybox.close();
+      //     xhr.onload = function () {
+      //       Fancybox.close();
 
-            Fancybox.show([{
-              src: '#modal-thanks',
-              type: 'inline'
-            }]);
-          }
-          event.preventDefault();
+      //       Fancybox.show([{
+      //         src: '#modal-thanks',
+      //         type: 'inline'
+      //       }]);
+      //     }
+      //     event.preventDefault();
 
-        } else {
-          event.preventDefault();
-        }
-      })
+      //   } else {
+      //     event.preventDefault();
+      //   }
+      // })
     })
   }
 }
