@@ -139,8 +139,7 @@
 		color: #545454
 	&__fields
 		gap: 20px
-		display: flex
-		flex-direction: column
+		display: grid
 	&__btn
 		margin-top: 30px
 	&__policy
@@ -150,6 +149,17 @@
 		color: #828B9A
 		a
 			font-size: 12px
+
+	&.--w3
+		.form
+			&__fields
+				grid-template-columns: repeat(3, 1fr)
+			&__btn
+				margin-top: 0
+			&__policy
+				font-size: 14px
+				a
+					font-size: 14px
 
 // MAIN
 .side-panel
@@ -698,6 +708,28 @@
 		line-height: 22px
 	&__btn
 		margin-top: 64px
+
+.quest
+	padding: 62px 0 118px
+	&__title
+		font-weight: 600
+		margin-bottom: 24px
+	&__subtitle
+		font-size: 24px
+		line-height: 36px
+		margin-bottom: 48px
+	&__call
+		margin-top: 24px
+		&-wrap
+			align-items: center
+			justify-content: center
+		&-title
+			font-size: 24px
+			margin-bottom: 24px
+		&-link
+			font-size: 40px
+			font-weight: 700
+			margin-left: 12px
 
 .contacts
 	padding: 125px 0 50px

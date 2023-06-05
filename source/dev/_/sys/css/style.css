@@ -556,8 +556,7 @@ path, circle, rect, line {
 }
 .form__fields {
   gap: 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
 }
 .form__btn {
   margin-top: 30px;
@@ -570,6 +569,18 @@ path, circle, rect, line {
 }
 .form__policy a {
   font-size: 12px;
+}
+.form.--w3 .form__fields {
+  grid-template-columns: repeat(3, 1fr);
+}
+.form.--w3 .form__btn {
+  margin-top: 0;
+}
+.form.--w3 .form__policy {
+  font-size: 14px;
+}
+.form.--w3 .form__policy a {
+  font-size: 14px;
 }
 
 .side-panel {
@@ -1224,6 +1235,35 @@ path, circle, rect, line {
 }
 .delivery__btn {
   margin-top: 64px;
+}
+
+.quest {
+  padding: 62px 0 118px;
+}
+.quest__title {
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.quest__subtitle {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 48px;
+}
+.quest__call {
+  margin-top: 24px;
+}
+.quest__call-wrap {
+  align-items: center;
+  justify-content: center;
+}
+.quest__call-title {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.quest__call-link {
+  font-size: 40px;
+  font-weight: 700;
+  margin-left: 12px;
 }
 
 .contacts {

@@ -320,6 +320,35 @@ block content
 				source(srcset="/_/uploads/order-2.webp" type="image/webp")
 				img(src="/_/uploads/order-2.jpg" alt="" loading="lazy")
 
+	.quest.bg
+		.case
+			.quest__title.h2.tac #[h2 Остались вопросы?]
+			.quest__subtitle.tac Оставьте заявку в форме ниже и мы свяжемся с вами #[br]в течение 15 минут, чтобы обсудить все детали
+			.quest__form.form.--w3
+				.form__fields
+					.form__field.field.--required.--name
+						.field__wrap
+							.field__icon
+								img(src="_/uploads/icons/person-gray.svg", alt="")
+							input.field__area(type="name" name="name" placeholder="Введите ваше имя")
+					.form__field.field.--required.--tel
+						.field__wrap
+							.field__icon
+								img(src="_/uploads/icons/tel-gray.svg", alt="")
+							input.field__area(type="tel" name="tel" placeholder="Ваш телефон")
+					.form__btn.btn.--primary.--md Получить консультацию
+				.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.--primary.inline обработки данных] и #[a(href="/politika.pdf" target="_blank").link.--primary.inline политикой конфиденциальности]
+			.quest__call
+				.quest__call-title.tac Или позвоните нам по телефону
+				.quest__call-wrap.row
+					.quest__call-img
+						img(src="/_/uploads/tel.png" srcset="/_/uploads/tel-2x.png 2x", alt="")
+					a.quest__call-link.tel(href="tel:+79853979759") +7 (985) 397-97-59
+		.quest__bg.bg-img
+			picture
+				source(srcset="/_/uploads/quest-bg.webp" type="image/webp")
+				img(src="/_/uploads/quest-bg.jpg" alt="" loading="lazy")
+
 	.contacts#contacts
 		.case
 			.contacts__wrap
