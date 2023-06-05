@@ -126,3 +126,17 @@
 .header.--scroll .header__contacts-time, .header.--scroll .header__contacts-callback {
   opacity: 0;
 }
+
+@media screen and (max-width: 1280px) {
+  .header__logo {
+    max-width: 300px;
+  }
+  .header__map-info {
+    padding-left: 16px;
+  }
+  .header__btn {
+    font-size: 16px;
+    max-width: 250px;
+    margin-left: 20px;
+  }
+}

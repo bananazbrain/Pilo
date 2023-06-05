@@ -5,6 +5,7 @@
 
 @import ../../components/btn/btn
 @import ../../components/field/field
+@import ../../components/check/check
 @import ../../components/modal/modal
 @import ../../components/slider/slider
 
@@ -108,6 +109,7 @@
 	font-feature-settings: 'tnum' on, 'lnum' on
 
 .decor-item
+	z-index: -1
 	position: absolute
 
 .decor-bottom
@@ -141,7 +143,7 @@
 		gap: 20px
 		display: grid
 	&__btn
-		margin-top: 30px
+		margin-top: 16px
 	&__policy
 		margin-top: 30px
 		font-size: 12px
@@ -273,6 +275,7 @@
 		flex-direction: column
 	&__img
 		width: 100%
+		max-width: 864px
 		position: absolute
 	&__note
 		z-index: 1
@@ -312,6 +315,7 @@
 			&:nth-of-type(2)
 				right: 0
 				bottom: 0
+				z-index: 1
 			&:nth-of-type(3)
 				top: 0
 				right: 0
@@ -362,10 +366,46 @@
 	&__title
 		margin-bottom: 40px
 	&__wrap
+		padding: 40px 65px
 		min-height: 710px
 		background: var(--color-white)
 		border-radius: var(--border)
 		box-shadow: 0px 16px 92px rgba(0, 0, 0, 0.07)
+		position: relative
+	&__step
+		opacity: 0
+		visibility: hidden
+		pointer-events: none
+		&.--active
+			opacity: 1
+			visibility: visible
+			pointer-events: all
+	&__head
+		display: flex
+		align-items: center
+		flex-direction: column
+	&__num
+		font-size: 18px
+		color: var(--color-gray-2)
+	&__arrow
+		top: 28px
+		width: 59px
+		height: 59px
+		border-radius: 50%
+		background: var(--color-primary)
+		transition: var(--transition)
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		&:hover
+			background: darken(#FBCC50, 10%)
+		&.--prev
+			left: 65px
+		&.--next
+			right: 65px
+
 	&__decor
 		&-item
 			&:nth-of-type(1)
@@ -495,6 +535,7 @@
 		font-weight: 700
 		line-height: 21px
 		min-height: 42px
+		margin-bottom: 4px
 		color: var(--color-secondary)
 		display: flex
 		align-items: center
@@ -610,10 +651,17 @@
 		&:nth-of-type(3)
 			.why
 				&__img
-					right: -24px
+					right: -170px
+					bottom: -10px
+		&:nth-of-type(4)
+			.why
+				&__img
+					right: -130px
+					bottom: -40px
 		&:nth-of-type(5)
 			.why
 				&__img
+					right: -70px
 					bottom: 50px
 	&__info
 		z-index: 1
@@ -764,7 +812,7 @@
 	&__icon
 		width: 51px
 		height: 51px
-		background: var(--color-gray)
+		background: #D8D8D8
 		border-radius: 50%
 		overflow: hidden
 	&__info
@@ -872,3 +920,221 @@
 .ymaps-2-1-79-ground-pane
 	filter: grayscale(100%)
 	-webkit-filter: grayscale(100%)
+
+@media screen and (max-width: 1280px)
+	.h1
+		font-size: 44px
+		line-height: 56px
+
+	.h3
+		font-size: 30px
+		line-height: 36px
+
+	.logo
+		&__img
+			width: 110px
+		&__text
+			width: calc( 100% - 110px )
+			padding-left: 32px
+			&:before
+				left: 16px
+
+	.intro
+		padding: 130px 0 170px
+		&__info
+			max-width: 550px
+		&__label
+			padding: 8px 25px
+			margin-bottom: 8px
+			border-radius: var(--border-md)
+		&__act
+			flex-direction: column
+		&__desc
+			max-width: 280px
+			margin-top: 16px
+			text-align: center
+			margin-left: 30px
+			&:before
+				display: none
+			br
+				display: none
+		&__preview
+			width: calc( 100% - 550px )
+		&__img
+			margin-left: -50px
+		&__decor
+			&-item
+				&:nth-of-type(1)
+					left: -70px
+				&:nth-of-type(3)
+					max-width: 160px
+
+	.pros
+		margin-top: -80px
+		&__list
+			gap: 12px
+		&__item
+			padding: 16px 16px 24px
+		&__text
+			br
+				display: none
+
+	.quiz
+		&__decor
+			&-item
+				&:nth-of-type(1)
+					top: 0
+					left: -250px
+					max-width: 250px
+
+	.consult
+		&__preview
+			top: 0
+			transform: none
+			margin-left: 0
+			bottom: auto
+		&__img
+			width: 520px
+			max-width: 520px
+		&__form
+			max-width: 100%
+			margin-top: 32px
+			.form
+				&__subtitle
+					br
+						display: none
+				&__fields
+					grid-template-columns: repeat(3, 1fr)
+				&__btn
+					min-height: 80px
+					font-size: 16px
+					margin-top: 0
+				&__policy
+					br
+						display: none
+
+	.qual
+		&__img
+			top: 120px
+		&__list
+			gap: 16px
+			z-index: 1
+			max-width: 650px
+			margin-top: 250px
+			position: relative
+			margin-left: auto
+			margin-right: auto
+		&__item
+			&:nth-of-type(1), &:nth-of-type(5)
+				margin-left: 0
+			&:nth-of-type(2), &:nth-of-type(6)
+				margin-right: 0
+		&__btn
+			margin-top: 16px
+
+	.type
+		&__list
+			grid-template-columns: repeat(3, 1fr)
+		&__text
+			br
+				display: none
+
+	.order
+		&__title
+			margin-bottom: 8px
+		&__subtitle
+			font-size: 24px
+			margin-bottom: 24px
+
+	.gallery
+		&__title
+			margin-bottom: 32px
+		&__slider
+			&-arrow
+				&.swiper-button-prev
+					left: 95px
+				&.swiper-button-next
+					right: 95px
+
+	.delivery
+		&__img
+			height: 530px
+			margin-left: -370px
+		&__info
+			max-width: 525px
+			padding-left: 32px
+			padding-top: 0
+		&__title
+			margin-bottom: 24px
+		&__list
+			gap: 24px
+			margin-left: 0
+		&__text
+			padding-left: 16px
+		&__btn
+			margin-top: 48px
+
+	.why
+		&__title
+			margin-bottom: 32px
+		&__list
+			margin: -8px
+			justify-content: center
+		&__item
+			padding: 32px 24px
+			margin: 8px
+			width: calc(50% - 16px)
+			&.--w2
+				width: calc(50% - 16px)
+			&:nth-of-type(1)
+				.why
+					&__img
+						right: -80px
+			&:nth-of-type(3)
+				.why
+					&__img
+						right: -110px
+						bottom: 0
+			&:nth-of-type(4)
+				.why
+					&__img
+						right: -60px
+						bottom: 0
+			&:nth-of-type(5)
+				.why
+					&__img
+						right: -20px
+						bottom: 30px
+		&__decor
+			&-item
+				&:nth-of-type(4)
+					top: 220px
+
+	.reviews
+		&__slider
+			&-arrow
+				&.swiper-button-prev
+					left: 0
+				&.swiper-button-next
+					right: 0
+
+	.quest
+		padding: 40px 0 100px
+		&__title
+			margin-bottom: 16px
+		&__form
+			.form
+				&__btn
+					font-size: 16px
+		&__call
+			margin-top: 48px
+
+	.contacts
+		&__wrap
+			max-width: 580px
+		&__info
+			padding: 32px 32px 48px
+		&__img
+			height: 190px
+			max-width: 270px
+			margin-right: 16px

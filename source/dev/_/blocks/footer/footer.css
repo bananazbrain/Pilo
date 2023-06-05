@@ -77,3 +77,12 @@
   margin-top: 32px;
   font-size: 14px;
 }
+
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: 50px 0;
+  }
+  .footer__nav {
+    max-width: 340px;
+  }
+}

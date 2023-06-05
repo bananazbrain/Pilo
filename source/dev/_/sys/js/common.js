@@ -128,6 +128,8 @@ window.onload = () => {
 
         if (dw >= 1281) {
           ymap.setCenter([mapPosition[0], mapPosition[1] - -0.004]);
+        } else if (dw <= 1280 && dw >= 1025) {
+          ymap.setCenter([mapPosition[0], mapPosition[1] - -0.005]);
         } else if (dw <= 1024 && dw >= 768) {
           ymap.setCenter([mapPosition[0] - 0.002, mapPosition[1] - -0.003]);
         } else if (dw <= 767) {

@@ -80,6 +80,26 @@ block content
 		.case
 			.quiz__title.h2.tac #[h2 #[strong Рассчитайте стоимость заказа за 1 минуту,] #[br]ответив на 4 простых вопроса]
 			.quiz__wrap
+				.quiz__step.--active
+					.quiz__head
+						.quiz__num 1 вопрос из 4
+						.quiz__arrow.--next
+							img(src="_/uploads/icons/arrow.svg", alt="")
+				.quiz__step
+					.quiz__head
+						.quiz__num 2 вопрос из 4
+						.quiz__arrow
+							img(src="_/uploads/icons/arrow.svg", alt="")
+				.quiz__step
+					.quiz__head
+						.quiz__num 3 вопрос из 4
+						.quiz__arrow
+							img(src="_/uploads/icons/arrow.svg", alt="")
+				.quiz__step
+					.quiz__head
+						.quiz__num 4 вопрос из 4
+						.quiz__arrow
+							img(src="_/uploads/icons/arrow.svg", alt="")
 			.quiz__decor
 				.quiz__decor-item.decor-item
 					img(src="_/uploads/decor/decor-4.png", alt="")
@@ -118,7 +138,7 @@ block content
 								.field__icon
 									img(src="_/uploads/icons/tel-gray.svg", alt="")
 								input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
-					.form__btn.btn.--primary Получить консультацию
+						.form__btn.btn.--primary Получить консультацию
 					.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
 		.consult__bg.bg-img
 			picture
