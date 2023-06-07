@@ -164,15 +164,70 @@ window.onload = () => {
   }
 
   // QUIZ
-  let quiz = document.querySelector('.quiz');
-  if (quiz) {
-    let qiuzSteps = quiz.querySelectorAll('.quiz__step');
+	class Quiz {
+		currentStep = null
+		currentIndex = null
+		classStepActive = '--active'
 
-    qiuzSteps.forEach((step) => {
+		constructor(element) {
+			this.element = element
 
-    })
+			if (!this.element) return false
 
-  }
+			this.steps = this.element.querySelectorAll('.quiz__step')
+			this.nextBtns = this.element.querySelectorAll('.quiz__btn-next')
+			this.prevBtns = this.element.querySelectorAll('.quiz__btn-prev')
+
+			const firstStep = this.steps[0]
+			this.setCurrentStep(firstStep, 0)
+
+			for (const button of this.nextBtns) {
+				button.addEventListener('click', ()=>{
+					this.goNextStep()
+				})
+			}
+
+			for (const button of this.prevBtns) {
+				button.addEventListener('click', ()=>{
+					this.goPrevStep()
+				})
+			}
+		}
+
+		goNextStep() {
+			const nextIndex = this.currentIndex + 1
+			const nextStep = this.steps[nextIndex]
+
+			this.removeCurrentStep()
+
+			if (nextStep) {
+				this.setCurrentStep(nextStep, nextIndex)
+			}
+		}
+
+		goPrevStep() {
+			const prevIndex = this.currentIndex - 1
+			const prevStep = this.steps[prevIndex]
+
+			if (prevIndex != null) {
+				this.removeCurrentStep()
+				this.setCurrentStep(prevStep, prevIndex)
+			}
+		}
+
+		setCurrentStep(step, index) {
+			this.currentStep = step
+			this.currentIndex = index
+
+			this.currentStep.classList.add(this.classStepActive)
+		}
+
+		removeCurrentStep() {
+			this.currentStep.classList.remove(this.classStepActive)
+		}
+	}
+
+	new Quiz(document.querySelector('.quiz'))
 
   // MAP
   let map = document.querySelector('#map');
