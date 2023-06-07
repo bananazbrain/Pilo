@@ -39,7 +39,7 @@ if ($delivery) {
 }
 
 // $to = "proflist-context@yandex.ru, rpm-2009@yandex.ru";
-$to = "e5ash.bro@gmail.com";
+$to = "jv@bananazbrain.ru";
 $headers = "Content-type: text/plain; charset = UTF-8";
 $subject = "Новый заказ с сайта";
 $send = mail($to, $subject, $message, $headers);
