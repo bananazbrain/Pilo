@@ -38,8 +38,7 @@ if ($delivery) {
 	$message .= "\nДоставка: $delivery";
 }
 
-// $to = "proflist-context@yandex.ru, rpm-2009@yandex.ru";
-$to = "jv@bananazbrain.ru";
+$to = "pilomir-context@yandex.ru";
 $headers = "Content-type: text/plain; charset = UTF-8";
 $subject = "Новый заказ с сайта";
 $send = mail($to, $subject, $message, $headers);
