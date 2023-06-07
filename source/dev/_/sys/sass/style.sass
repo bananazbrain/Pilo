@@ -366,7 +366,7 @@
 	&__title
 		margin-bottom: 40px
 	&__wrap
-		padding: 40px 65px
+		padding: 26px 65px
 		min-height: 710px
 		background: var(--color-white)
 		border-radius: var(--border)
@@ -376,19 +376,24 @@
 		opacity: 0
 		visibility: hidden
 		pointer-events: none
+		display: none
 		&.--active
 			opacity: 1
 			visibility: visible
 			pointer-events: all
+			display: block
 	&__head
+		min-height: 60px
 		display: flex
 		align-items: center
+		justify-content: center
 		flex-direction: column
+		position: relative
 	&__num
 		font-size: 18px
 		color: var(--color-gray-2)
 	&__arrow
-		top: 28px
+		top: 0
 		width: 59px
 		height: 59px
 		border-radius: 50%
@@ -402,9 +407,29 @@
 		&:hover
 			background: darken(#FBCC50, 10%)
 		&.--prev
-			left: 65px
+			left: 0
 		&.--next
-			right: 65px
+			right: 0
+	&__bar
+		padding: 6px
+		height: 35px
+		margin-top: 16px
+		border-radius: 50px
+		background: #f8f7f5
+		display: flex
+		align-items: center
+	&__body
+		margin-top: 24px
+	&__step-name
+		font-weight: 700
+		margin-bottom: 42px
+	&__list
+		gap: 34px 72px
+		max-width: 852px
+		margin-left: auto
+		margin-right: auto
+		display: grid
+		grid-template-columns: repeat(3, 1fr)
 
 	&__decor
 		&-item

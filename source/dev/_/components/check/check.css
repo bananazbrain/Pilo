@@ -9,3 +9,70 @@
 .check__input {
   display: none;
 }
+.check__point {
+  transition: var(--transition);
+}
+.check__text {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.check.--img .check__wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.check.--img .check__img {
+  width: 100%;
+  height: 145px;
+  margin-bottom: 28px;
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+.check.--img .check__point {
+  top: 120px;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  border: 5px solid var(--color-white);
+  background: #FAFAFA;
+  position: absolute;
+}
+.check.--img .check__point:before {
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 8px;
+  transition: var(--transition);
+  transform: translate(-50%, -50%);
+  background: url("../../uploads/icons/check-gray.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  content: "";
+}
+.check.--img .check__text {
+  font-weight: 600;
+}
+.check.--img:hover .check__point {
+  background: var(--color-primary);
+}
+.check.--img:hover .check__point:before {
+  background: url("../../uploads/icons/check-brown.svg") no-repeat;
+  background-size: contain;
+}
+.check.--img.--checked .check__point {
+  background: var(--color-primary);
+}
+.check.--img.--checked .check__point:before {
+  background: url("../../uploads/icons/check-brown.svg") no-repeat;
+  background-size: contain;
+}

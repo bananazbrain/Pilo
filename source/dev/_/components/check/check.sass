@@ -7,3 +7,65 @@
   transition: var(--transition)
   &__input
     display: none
+  &__point
+    transition: var(--transition)
+  &__text
+    user-select: none
+    -moz-user-select: none
+    -webkit-user-select: none
+    -webkit-touch-callout: none
+    -webkit-tap-highlight-color: transparent
+  &.--img
+    .check
+      &__wrap
+        width: 100%
+        display: flex
+        align-items: center
+        flex-direction: column
+      &__img
+        width: 100%
+        height: 145px
+        margin-bottom: 28px
+        border-radius: 30px
+        overflow: hidden
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: var(--transition)
+      &__point
+        top: 120px
+        left: 50%
+        width: 50px
+        height: 50px
+        transform: translateX(-50%)
+        border-radius: 50%
+        border: 5px solid var(--color-white)
+        background: #FAFAFA
+        position: absolute
+        &:before
+          top: 50%
+          left: 50%
+          width: 11px
+          height: 8px
+          transition: var(--transition)
+          transform: translate(-50%, -50%)
+          background: url('../../uploads/icons/check-gray.svg') no-repeat
+          background-size: contain
+          position: absolute
+          content: ""
+      &__text
+        font-weight: 600
+    &:hover
+      .check
+        &__point
+          background: var(--color-primary)
+          &:before
+            background: url('../../uploads/icons/check-brown.svg') no-repeat
+            background-size: contain
+    &.--checked
+      .check
+        &__point
+          background: var(--color-primary)
+          &:before
+            background: url('../../uploads/icons/check-brown.svg') no-repeat
+            background-size: contain
