@@ -96,8 +96,11 @@
   .footer {
     padding: 40px 0;
   }
+  .footer__req {
+    margin-bottom: 32px;
+  }
   .footer__contacts {
-    margin-top: -100px;
+    margin-top: 32px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -111,7 +114,7 @@
   }
   .footer__contacts {
     max-width: 262px;
-    margin-top: -260px;
+    margin-top: 0px;
   }
 }
 @media screen and (max-width: 580px) {

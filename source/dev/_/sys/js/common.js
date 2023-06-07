@@ -169,9 +169,8 @@ window.onload = () => {
           slidesPerView: 2,
         },
         1025: {
-          slidesPerView: 'auto',
+          slidesPerView: 3,
           spaceBetween: 30,
-          slidesOffsetBefore: -15,
           centeredSlides: true,
           initialSlide: 1,
         },

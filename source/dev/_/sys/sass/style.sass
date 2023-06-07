@@ -462,6 +462,7 @@
 		font-weight: 700
 		margin-bottom: 42px
 	&__list
+		width: 100%
 		gap: 34px 72px
 		max-width: 852px
 		margin-left: auto
@@ -637,6 +638,8 @@
 		display: flex
 		align-items: center
 		justify-content: center
+		i
+			display: contents
 	&__text
 		font-size: 14px
 		line-height: 24px
@@ -873,20 +876,23 @@
 			align-items: flex-start
 		&-slide
 			opacity: 0
-			width: 250px
-			height: 530px
+			max-width: 275px
+			height: 568px
 			transition: var(--transition)
 			overflow: hidden
+			.reviews
+				&__img
+					height: 530px
+					display: flex
+					align-items: center
+					justify-content: center
 			&.swiper-slide-active
-				width: 275px
-				height: 568px
 				margin-top: -5px
-				&.--sm
-					margin-top: 50px
+				.reviews
+					&__img
+						height: 100%
 			&.swiper-slide-prev, &.swiper-slide-active, &.swiper-slide-next
 				opacity: 1
-			&.--sm
-				margin-top: 70px
 		&-arrow
 			margin-top: 30px
 			&.swiper-button-prev
@@ -900,6 +906,8 @@
 					background: #C7C7C7
 				&-bullet-active
 					background: var(--color-primary)
+	&__img
+		transition: var(--transition)
 	&__decor
 		&-item
 			z-index: 1
@@ -982,7 +990,7 @@
 	&__area
 		height: 100%
 
-.ymaps-2-1-79-copyrights-panecalc.pugomm
+.ymaps-2-1-79-copyrights-pane
 	display: none
 
 .ymaps-2-1-79-ground-pane
@@ -1006,6 +1014,10 @@
 			padding-left: 32px
 			&:before
 				left: 16px
+
+	.anchore
+		&__link
+			top: -100px
 
 	.intro
 		padding: 130px 0 170px
@@ -1181,6 +1193,13 @@
 	.reviews
 		&__slider
 			max-width: 800px
+			&-wrap
+				height: 520px
+			&-slide
+				height: 520px
+				.reviews
+					&__img
+						height: 460px
 			&-arrow
 				&.swiper-button-prev
 					left: 0
@@ -1460,15 +1479,13 @@
 			&-wrap
 				height: 100%
 			&-slide
-				height: 498px
-				align-items: center
-				flex-direction: column
-				display: flex
+				max-width: 348px
+				height: 480px
+				.reviews
+					&__img
+						height: 100%
 				&.swiper-slide-active
-					height: 498px
-					.reviews
-						&__img
-							margin-top: 0
+					margin-top: 0
 				&.swiper-slide-prev
 					opacity: 0
 			&-controls
@@ -1495,13 +1512,6 @@
 					left: 0
 				&.swiper-button-next
 					right: 0
-		&__person
-			margin-bottom: 24px
-		&__img
-			height: 430px !important
-			width: auto
-			margin-left: auto
-			margin-right: auto
 
 	.quest
 		&__subtitle
@@ -1779,6 +1789,8 @@
 
 	.reviews
 		padding: 40px 0 50px
+		&__title
+			margin-bottom: 32px
 		&__slider
 			max-width: 300px
 			&-slide
@@ -1849,6 +1861,10 @@
 					a
 						font-size: 12px
 
+	.anchore
+		&__link
+			top: -60px
+
 	.intro
 		padding: 96px 0 84px
 		&__label
@@ -1893,6 +1909,7 @@
 	.quiz
 		padding: 32px 0 32px
 		&__wrap
+			min-height: 620px
 			padding: 12px 8px 16px
 		&__head
 			min-height: 38px
@@ -2067,9 +2084,12 @@
 			position: relative
 			overflow: visible
 			img
+				left: 50%
+				width: calc( 100% + 32px )
+				transform: translateX(-50%)
+				position: relative
 				max-width: none
 				max-height: none
-				width: max-content
 		&__list
 			gap: 22px
 		&__item
@@ -2136,14 +2156,14 @@
 
 	.reviews
 		padding: 22px 0
+		&__title
+			margin-bottom: 24px
 		&__slider
 			max-width: 200px
+			&-wrap
+				height: 400px
 			&-slide
-				&.--sm
-					.reviews
-						&__img
-							margin-top: 50px
-							height: 280px !important
+				height: 400px
 			&-arrow
 				margin-top: 52px
 				&.swiper-button-prev

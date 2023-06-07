@@ -1095,6 +1095,7 @@ path, circle, rect, line {
   margin-bottom: 42px;
 }
 .quiz__list {
+  width: 100%;
   gap: 34px 72px;
   max-width: 852px;
   margin-left: auto;
@@ -1299,6 +1300,9 @@ path, circle, rect, line {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.qual__name i {
+  display: contents;
 }
 .qual__text {
   font-size: 14px;
@@ -1585,24 +1589,25 @@ path, circle, rect, line {
 }
 .reviews__slider-slide {
   opacity: 0;
-  width: 250px;
-  height: 530px;
+  max-width: 275px;
+  height: 568px;
   transition: var(--transition);
   overflow: hidden;
 }
+.reviews__slider-slide .reviews__img {
+  height: 530px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .reviews__slider-slide.swiper-slide-active {
-  width: 275px;
-  height: 568px;
   margin-top: -5px;
 }
-.reviews__slider-slide.swiper-slide-active.--sm {
-  margin-top: 50px;
+.reviews__slider-slide.swiper-slide-active .reviews__img {
+  height: 100%;
 }
 .reviews__slider-slide.swiper-slide-prev, .reviews__slider-slide.swiper-slide-active, .reviews__slider-slide.swiper-slide-next {
   opacity: 1;
-}
-.reviews__slider-slide.--sm {
-  margin-top: 70px;
 }
 .reviews__slider-arrow {
   margin-top: 30px;
@@ -1621,6 +1626,9 @@ path, circle, rect, line {
 }
 .reviews__slider-pagination .swiper-pagination-bullet-active {
   background: var(--color-primary);
+}
+.reviews__img {
+  transition: var(--transition);
 }
 .reviews__decor-item {
   z-index: 1;
@@ -1725,7 +1733,7 @@ path, circle, rect, line {
   height: 100%;
 }
 
-.ymaps-2-1-79-copyrights-panecalc.pugomm {
+.ymaps-2-1-79-copyrights-pane {
   display: none;
 }
 
@@ -1752,6 +1760,9 @@ path, circle, rect, line {
   }
   .logo__text:before {
     left: 16px;
+  }
+  .anchore__link {
+    top: -100px;
   }
   .intro {
     padding: 130px 0 170px;
@@ -1936,6 +1947,15 @@ path, circle, rect, line {
   }
   .reviews__slider {
     max-width: 800px;
+  }
+  .reviews__slider-wrap {
+    height: 520px;
+  }
+  .reviews__slider-slide {
+    height: 520px;
+  }
+  .reviews__slider-slide .reviews__img {
+    height: 460px;
   }
   .reviews__slider-arrow.swiper-button-prev {
     left: 0;
@@ -2254,15 +2274,13 @@ path, circle, rect, line {
     height: 100%;
   }
   .reviews__slider-slide {
-    height: 498px;
-    align-items: center;
-    flex-direction: column;
-    display: flex;
+    max-width: 348px;
+    height: 480px;
+  }
+  .reviews__slider-slide .reviews__img {
+    height: 100%;
   }
   .reviews__slider-slide.swiper-slide-active {
-    height: 498px;
-  }
-  .reviews__slider-slide.swiper-slide-active .reviews__img {
     margin-top: 0;
   }
   .reviews__slider-slide.swiper-slide-prev {
@@ -2297,15 +2315,6 @@ path, circle, rect, line {
   }
   .reviews__slider-arrow.swiper-button-next {
     right: 0;
-  }
-  .reviews__person {
-    margin-bottom: 24px;
-  }
-  .reviews__img {
-    height: 430px !important;
-    width: auto;
-    margin-left: auto;
-    margin-right: auto;
   }
   .quest__subtitle {
     font-size: 22px;
@@ -2636,6 +2645,9 @@ path, circle, rect, line {
   .reviews {
     padding: 40px 0 50px;
   }
+  .reviews__title {
+    margin-bottom: 32px;
+  }
   .reviews__slider {
     max-width: 300px;
   }
@@ -2715,6 +2727,9 @@ path, circle, rect, line {
   .form.--w3 .form__policy a {
     font-size: 12px;
   }
+  .anchore__link {
+    top: -60px;
+  }
   .intro {
     padding: 96px 0 84px;
   }
@@ -2771,6 +2786,7 @@ path, circle, rect, line {
     padding: 32px 0 32px;
   }
   .quiz__wrap {
+    min-height: 620px;
     padding: 12px 8px 16px;
   }
   .quiz__head {
@@ -2995,9 +3011,12 @@ path, circle, rect, line {
     overflow: visible;
   }
   .delivery__img img {
+    left: 50%;
+    width: calc(100% + 32px);
+    transform: translateX(-50%);
+    position: relative;
     max-width: none;
     max-height: none;
-    width: max-content;
   }
   .delivery__list {
     gap: 22px;
@@ -3072,12 +3091,17 @@ path, circle, rect, line {
   .reviews {
     padding: 22px 0;
   }
+  .reviews__title {
+    margin-bottom: 24px;
+  }
   .reviews__slider {
     max-width: 200px;
   }
-  .reviews__slider-slide.--sm .reviews__img {
-    margin-top: 50px;
-    height: 280px !important;
+  .reviews__slider-wrap {
+    height: 400px;
+  }
+  .reviews__slider-slide {
+    height: 400px;
   }
   .reviews__slider-arrow {
     margin-top: 52px;
