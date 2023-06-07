@@ -340,9 +340,10 @@ window.onload = () => {
 
   let validateForms = document.querySelectorAll('form');
   let modalThanks = document.getElementById('modal-thanks');
+
   if (validateForms) {
     validateForms.forEach((form) => {
-      let btnSubmit = form.querySelector('.btn');
+      let btnSubmit = form.querySelector('.btn-submit');
       let fieldsRequired = form.querySelectorAll('.field.--required');
       let popupModalForm = form.querySelector('.modal__form');
       let popupSendOkAttr = form.getAttribute('data-message-ok');
