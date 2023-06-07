@@ -201,7 +201,7 @@ window.onload = () => {
       let placemark = new ymaps.Placemark(mapPlaceholder, {
       }, {
         iconLayout: 'default#image',
-        iconImageHref: '/_/uploads/icons/placemark.svg',
+        iconImageHref: '_/uploads/icons/placemark.svg',
         iconImageSize: [36, 52],
       }, {});
       ymap.geoObjects.add(placemark);
