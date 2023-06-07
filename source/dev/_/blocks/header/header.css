@@ -140,3 +140,52 @@
     margin-left: 20px;
   }
 }
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(161, 174, 197, 0.3);
+  }
+  .header__logo {
+    max-width: 110px;
+  }
+  .header__map {
+    display: none;
+  }
+  .header__socials {
+    display: none;
+  }
+  .header__contacts-time {
+    display: none;
+  }
+  .header__contacts-callback {
+    display: none;
+  }
+  .header__btn {
+    font-size: 14px;
+    max-width: 220px;
+    margin-left: -50px;
+  }
+  .header__btn.--sm {
+    min-height: 58px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header__btn {
+    display: none;
+  }
+}
+@media screen and (max-width: 580px) {
+  .header {
+    padding: 8px 0 10px;
+  }
+  .header__logo {
+    max-width: 84px;
+  }
+  .header__contacts-tel {
+    font-size: 18px;
+  }
+  .header__contacts-tel:before {
+    top: 2px;
+    margin-left: -25px;
+  }
+}

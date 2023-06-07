@@ -160,7 +160,7 @@ block content
 								.qual__name!=name
 								.qual__text!=text
 					+qual('_/uploads/qual-1.svg', 'Безопасна <br>для всей семьи', 'Не выделяет никаких вредных веществ, которые могут навредить здоровью человека')
-					+qual('_/uploads/qual-2.svg', 'Устойчива к влаге', 'Фанера не погнется или не разрушится при воздействии влаги, что делает <br>ее подходящей для влажных условий')
+					+qual('_/uploads/qual-2.svg', 'Устойчива <i></i> к влаге', 'Фанера не погнется или не разрушится при воздействии влаги, что делает <br>ее подходящей для влажных условий')
 					+qual('_/uploads/qual-3.svg', 'Сделана из <br>натуральных материалов', 'В составе фанеры используются только натуральная основа. В основном – береза.')
 					+qual('_/uploads/qual-4.svg', 'Обладает высокой <br>прочностью', 'Многослойная структура фанеры обеспечивает высокую прочность <br>и устойчивость к деформациям')
 					+qual('_/uploads/qual-5.svg', 'Имеет эстетический вид', 'Фанеру можно окрасить, лакировать <br>и шлифовать, достигая желаемого внешнего вида')
@@ -217,7 +217,7 @@ block content
 
 	.gallery
 		.case
-			.gallery__title.h2.tac #[h2 #[strong С 2010 года] доставили уже более #[br]#[strong 3000 м3] фанеры по всей России]
+			.gallery__title.h2.tac #[h2 #[strong С 2010 года] доставили уже более #[br]#[strong 3000 м3] фанеры #[i]по всей России]
 			.gallery__slider.swiper
 				.gallery__slider-wrap.swiper-wrapper
 					.gallery__slider-slide.swiper-slide.cover
@@ -234,8 +234,16 @@ block content
 							img(src="/_/uploads/gallery/gallery-3.jpg" alt="" loading="lazy")
 					.gallery__slider-slide.swiper-slide.cover
 						picture
-							source(srcset="/_/uploads/gallery/gallery-1.webp" type="image/webp")
-							img(src="/_/uploads/gallery/gallery-1.jpg" alt="" loading="lazy")
+							source(srcset="/_/uploads/gallery/gallery-4.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-4.jpg" alt="" loading="lazy")
+					.gallery__slider-slide.swiper-slide.cover
+						picture
+							source(srcset="/_/uploads/gallery/gallery-5.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-5.jpg" alt="" loading="lazy")
+					.gallery__slider-slide.swiper-slide.cover
+						picture
+							source(srcset="/_/uploads/gallery/gallery-6.webp" type="image/webp")
+							img(src="/_/uploads/gallery/gallery-6.jpg" alt="" loading="lazy")
 				.gallery__slider-controls
 					.gallery__slider-pagination.swiper-pagination
 					.gallery__slider-arrows
@@ -255,7 +263,7 @@ block content
 						.delivery__item
 							.delivery__icon
 								img(src="_/uploads/icons/check-bg.svg", alt="")
-							.delivery__text Доставка по Москве и области в день заказа
+							.delivery__text Доставка по Москве и области #[i]в день заказа
 						.delivery__item
 							.delivery__icon
 								img(src="_/uploads/icons/check-bg.svg", alt="")
@@ -263,8 +271,8 @@ block content
 						.delivery__item
 							.delivery__icon
 								img(src="_/uploads/icons/check-bg.svg", alt="")
-							.delivery__text При необходимости, вы можете #[strong приехать #[br]за заказом самостоятельно] и оплатить на месте
-					a.delivery__btn.btn.--primary(data-fancybox data-src="#modal-price" href="javascript:;") Узнать стоимость фанеры с доставкой
+							.delivery__text При необходимости, вы можете #[strong приехать #[br]за заказом самостоятельно] и оплатить #[i]на месте
+					a.delivery__btn.btn.--primary(data-fancybox data-src="#modal-price" href="javascript:;") Узнать стоимость #[i]фанеры с доставкой
 
 	.why
 		.case
@@ -349,11 +357,39 @@ block content
 								.reviews__icon.cover
 									img(src="_/uploads/reviews.png", alt="")
 								.reviews__info
-									.reviews__name Михаил Аветов
+									.reviews__name Александр
 									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews-1.png", alt="")
+								img(src="_/uploads/reviews/Александр (клиент).png", alt="")
 						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Евгения
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews/Евгения (клиент).png", alt="")
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Егор
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews/Егор (клиент).png", alt="")
+						.reviews__slider-slide.swiper-slide
+							.reviews__person
+								.reviews__icon.cover
+									img(src="_/uploads/reviews.png", alt="")
+								.reviews__info
+									.reviews__name Сергей
+									.reviews__city г. Москва
+							.reviews__img
+								img(src="_/uploads/reviews/Сергей (клиент).png", alt="")
+						
+						.reviews__slider-slide.swiper-slide.--sm
 							.reviews__person
 								.reviews__icon.cover
 									img(src="_/uploads/reviews.png", alt="")
@@ -361,8 +397,8 @@ block content
 									.reviews__name Михаил Аветов
 									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews-1.png", alt="")
-						.reviews__slider-slide.swiper-slide
+								img(src="_/uploads/reviews/reviews-1.png", alt="")
+						.reviews__slider-slide.swiper-slide.--sm
 							.reviews__person
 								.reviews__icon.cover
 									img(src="_/uploads/reviews.png", alt="")
@@ -370,25 +406,7 @@ block content
 									.reviews__name Михаил Аветов
 									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews-1.png", alt="")
-						.reviews__slider-slide.swiper-slide
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Михаил Аветов
-									.reviews__city г. Москва
-							.reviews__img
-								img(src="_/uploads/reviews-1.png", alt="")
-						.reviews__slider-slide.swiper-slide
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Михаил Аветов
-									.reviews__city г. Москва
-							.reviews__img
-								img(src="_/uploads/reviews-1.png", alt="")
+								img(src="_/uploads/reviews/reviews-2.png", alt="")
 				.reviews__slider-controls
 					.reviews__slider-pagination.swiper-pagination
 					.reviews__slider-arrows

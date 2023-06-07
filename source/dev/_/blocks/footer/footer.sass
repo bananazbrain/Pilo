@@ -58,9 +58,74 @@
 	&__btn
 		margin-top: 32px
 		font-size: 14px
+	&__links
+		display: none
 
 @media screen and (max-width: 1280px)
 	.footer
 		padding: 50px 0
 		&__nav
 			max-width: 340px
+
+@media screen and (max-width: 1024px)
+	.footer
+		padding: 40px 0
+		&__contacts
+			margin-top: -100px
+
+@media screen and (max-width: 767px)
+	.footer
+		&__nav
+			margin-top: 24px
+			max-width: 200px
+		&__nav-links
+			gap: 11px
+			flex-direction: column
+		&__contacts
+			max-width: 262px
+			margin-top: -260px
+
+@media screen and (max-width: 580px)
+	.footer
+		padding: 32px 0
+		&__company
+			max-width: 100%
+			display: flex
+			text-align: center
+			align-items: center
+			flex-direction: column
+			.footer
+				&__req
+					margin-bottom: 0
+					a
+						display: none
+				&__copy
+					display: none
+		&__logo
+			.logo
+				&__img
+					margin-left: auto
+					margin-right: auto
+		&__nav
+			max-width: 100%
+			text-align: center
+		&__nav-links
+			align-items: center
+		&__contacts
+			margin-top: 28px
+			max-width: 100%
+			text-align: center
+		&__btn
+			max-width: 270px
+			margin-left: auto
+			margin-right: auto
+		&__links
+			width: 100%
+			display: block
+			margin-top: 26px
+			font-size: 14px
+			a
+				font-size: 14px
+			.footer
+				&__policy
+					margin-bottom: 28px

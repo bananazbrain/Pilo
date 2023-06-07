@@ -756,6 +756,8 @@
 		line-height: 22px
 	&__btn
 		margin-top: 64px
+		i
+			display: none
 
 .reviews
 	padding: 50px 0 40px
@@ -781,7 +783,6 @@
 			.reviews
 				&__img
 					height: 434px
-					clip-path: path('M0 405.431V29.3819C0 28.2846 0 27.1889 0.00764444 26.0916C0.0122311 25.1687 0.0244622 24.2444 0.0489244 23.3215C0.102436 21.309 0.221689 19.2797 0.57792 17.2902C0.940267 15.2701 1.53195 13.3907 2.4661 11.5558C3.38343 9.7514 4.58055 8.10315 6.01006 6.67222C7.43804 5.24282 9.08619 4.04298 10.8887 3.12473C12.7204 2.19118 14.5978 1.59892 16.6144 1.23621C18.602 0.878094 20.6308 0.760252 22.6413 0.705157C23.5632 0.680671 24.4867 0.669958 25.4101 0.663836C26.5048 0.657715 27.601 0.657715 28.6957 0.657715H41.0681C42.7998 0.657715 44.2102 2.03462 44.2663 3.75439V4.92862C44.2663 11.4152 49.5195 16.6736 55.9997 16.6736H144C150.48 16.6736 155.733 11.4152 155.733 4.92862V3.76152C155.785 2.03843 157.197 0.657715 158.932 0.657715H171.304C172.4 0.657715 173.497 0.657715 174.591 0.663836C175.515 0.669958 176.437 0.680671 177.36 0.705157C179.371 0.760252 181.398 0.878094 183.387 1.23621C185.404 1.59892 187.281 2.19118 189.113 3.12473C190.915 4.04298 192.562 5.24282 193.991 6.67222C195.421 8.10315 196.618 9.7514 197.535 11.5558C198.47 13.3907 199.061 15.2701 199.424 17.2902C199.78 19.2797 199.899 21.309 199.953 23.3215C199.977 24.2444 199.988 25.1687 199.994 26.0916C200 27.1889 200 28.2846 200 29.3819V405.431C200 406.528 200 407.624 199.994 408.721C199.988 409.644 199.977 410.568 199.953 411.491C199.899 413.503 199.78 415.533 199.424 417.522C199.061 419.542 198.47 421.423 197.535 423.258C196.618 425.061 195.421 426.709 193.991 428.139C192.562 429.571 190.915 430.77 189.113 431.688C187.281 432.621 185.404 433.214 183.387 433.576C181.398 433.933 179.371 434.054 177.36 434.107C176.437 434.132 175.515 434.143 174.591 434.149C173.497 434.155 172.4 434.155 171.304 434.155H28.6957C27.601 434.155 26.5048 434.155 25.4101 434.149C24.4867 434.143 23.5632 434.132 22.6413 434.107C20.6308 434.054 18.602 433.933 16.6144 433.576C14.5978 433.214 12.7204 432.621 10.8887 431.688C9.08619 430.77 7.43804 429.571 6.01006 428.139C4.58055 426.709 3.38343 425.061 2.4661 423.258C1.53195 421.423 0.940267 419.542 0.57792 417.522C0.221689 415.533 0.102436 413.503 0.0489244 411.491C0.0244622 410.568 0.0122311 409.644 0.00764444 408.721C0 407.624 0 406.528 0 405.431Z')
 			&.swiper-slide-active
 				width: 231px
 				height: 573px
@@ -789,9 +790,16 @@
 					&__img
 						height: 498px
 						margin-top: -5px
-						clip-path: path('M0 463.154V33.1489C0 31.8942 0 30.6412 0.00874129 29.3864C0.0139861 28.3312 0.0279721 27.2742 0.0559443 26.2189C0.117133 23.9177 0.253498 21.5972 0.660842 19.3222C1.07518 17.0122 1.75176 14.8632 2.81994 12.7649C3.8689 10.7017 5.23778 8.81696 6.87241 7.18071C8.50528 5.54621 10.3899 4.17422 12.4511 3.12422C14.5455 2.05672 16.6924 1.37947 18.9983 0.964721C21.2711 0.555222 23.591 0.420472 25.89 0.357473C26.9442 0.329473 28.0001 0.317223 29.0561 0.310223C30.3078 0.303223 31.5613 0.303223 32.8131 0.303223H46.9608C48.9417 0.303223 50.555 1.87891 50.618 3.84649V5.18693C50.618 12.6042 56.6249 18.6171 64.0349 18.6171H164.661C172.071 18.6171 178.078 12.6042 178.078 5.18693V3.84332C178.143 1.87721 179.756 0.303223 181.735 0.303223H195.884C197.137 0.303223 198.391 0.303223 199.642 0.310223C200.698 0.317223 201.753 0.329473 202.808 0.357473C205.107 0.420472 207.426 0.555222 209.7 0.964721C212.006 1.37947 214.153 2.05672 216.247 3.12422C218.309 4.17422 220.191 5.54621 221.826 7.18071C223.461 8.81696 224.83 10.7017 225.878 12.7649C226.947 14.8632 227.623 17.0122 228.038 19.3222C228.445 21.5972 228.581 23.9177 228.642 26.2189C228.67 27.2742 228.683 28.3312 228.69 29.3864C228.697 30.6412 228.697 31.8942 228.697 33.1489V463.154C228.697 464.409 228.697 465.662 228.69 466.917C228.683 467.972 228.67 469.029 228.642 470.084C228.581 472.385 228.445 474.706 228.038 476.981C227.623 479.291 226.947 481.442 225.878 483.54C224.83 485.601 223.461 487.486 221.826 489.121C220.191 490.759 218.309 492.129 216.247 493.179C214.153 494.246 212.006 494.924 209.7 495.338C207.426 495.746 205.107 495.884 202.808 495.946C201.753 495.974 200.698 495.986 199.642 495.993C198.391 496 197.137 496 195.884 496H32.8131C31.5613 496 30.3078 496 29.0561 495.993C28.0001 495.986 26.9442 495.974 25.89 495.946C23.591 495.884 21.2711 495.746 18.9983 495.338C16.6924 494.924 14.5455 494.246 12.4511 493.179C10.3899 492.129 8.50528 490.759 6.87241 489.121C5.23778 487.486 3.8689 485.601 2.81994 483.54C1.75176 481.442 1.07518 479.291 0.660842 476.981C0.253498 474.706 0.117133 472.385 0.0559443 470.084C0.0279721 469.029 0.0139861 467.972 0.00874129 466.917C0 465.662 0 464.409 0 463.154Z')
+				&.--sm
+					.reviews
+						&__img
+							height: 350px
 			&.swiper-slide-prev, &.swiper-slide-active, &.swiper-slide-next
 				opacity: 1
+			&.--sm
+				.reviews
+					&__img
+						height: 300px
 		&-arrow
 			margin-top: 30px
 			&.swiper-button-prev
@@ -1138,3 +1146,853 @@
 			height: 190px
 			max-width: 270px
 			margin-right: 16px
+
+@media screen and (max-width: 1024px)
+	.h2
+		font-size: 34px
+		line-height: 44px
+
+	.h3
+		font-size: 26px
+		line-height: 32px
+
+	.h4
+		font-size: 20px
+		line-height: 30px
+
+	.logo
+		&__text
+			display: none
+
+	.side-panel
+		display: none
+
+	.form
+		padding: 24px 28px
+		&__title
+			font-size: 26px
+			margin-bottom: 16px
+		&__subtitle
+			margin-bottom: 16px
+		&__fields
+			gap: 16px
+		&__policy
+			margin-top: 16px
+
+		&.--w3
+			.form
+				&__fields
+					grid-template-columns: repeat(2, 1fr)
+				&__btn
+					grid-column: 1/3
+
+	.intro
+		padding: 120px 0 40px
+		&__info
+			max-width: 100%
+		&__label
+			padding: 8px 18px
+		&__act
+			flex-direction: row
+		&__desc
+			margin-top: 0px
+			max-width: 230px
+			margin-left: 80px
+			&:before
+				left: -40px
+				bottom: 10px
+				display: block
+			br
+				display: block
+		&__preview
+			width: 100%
+			margin-top: 24px
+			position: relative
+		&__img
+			max-width: 650px
+			position: relative
+			margin-left: auto
+			margin-right: auto
+		&__note
+			left: 50%
+			bottom: 180px
+			margin-left: 80px
+			transform: translateX(-50%)
+			position: absolute
+		&__decor
+			&-item
+				&:nth-of-type(1)
+					left: 0
+				&:nth-of-type(2), &:nth-of-type(3)
+					display: none
+
+	.pros
+		margin-top: -130px
+		&__list
+			gap: 8px
+		&__text
+			line-height: 20px
+
+	.consult
+		padding: 50px 0 60px
+		&__info
+			max-width: 420px
+		&__subtitle
+			font-size: 22px
+			line-height: 32px
+		&__pros
+			&-item
+				padding: 24px 24px 24px 32px
+		&__form
+			.form
+				&__subtitle
+					br
+						display: block
+				&__fields
+					grid-template-columns: repeat(2, 1fr)
+				&__btn
+					grid-column: 1/3
+
+	.qual
+		padding: 50px 0 60px
+		&__title
+			margin-bottom: 24px
+		&__img
+			top: 100px
+		&__btn
+			display: none
+
+	.type
+		padding: 50px 0 60px
+		&__title
+			margin-bottom: 24px
+		&__list
+			max-width: 650px
+			margin-left: auto
+			margin-right: auto
+			grid-template-columns: repeat(2, 1fr)
+		&__item
+			min-height: 400px
+		&__name
+			margin: 16px 0 10px
+		&__btn
+			font-size: 16px
+
+	.order
+		padding: 40px 0 50px
+		&__subtitle
+			font-size: 22px
+			line-height: 32px
+			max-width: 700px
+			margin-left: auto
+			margin-right: auto
+		&__fields
+			gap: 16px
+			grid-template-columns: repeat(2, 1fr)
+		&__policy
+			margin-top: 16px
+
+	.gallery
+		padding: 50px 0 60px
+		&__slider
+			&-wrap
+				height: 100%
+				align-items: flex-start
+			&-slide
+				width: 100%
+				height: 400px
+				&.swiper-slide-active
+					width: 100%
+					height: 400px
+			&-controls
+				display: flex
+				flex-direction: column-reverse
+			&-arrows
+				width: 100%
+				margin-top: 24px
+				max-width: 150px
+				margin-left: auto
+				margin-right: auto
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				justify-content: space-between
+			&-arrow
+				top: 0
+				margin-top: 0
+				position: relative
+				transform: none
+				&.swiper-button-prev
+					left: 0
+				&.swiper-button-next
+					right: 0
+
+	.delivery
+		padding: 50px 0 60px
+		&__img
+			height: 450px
+			width: calc( 100% + 20px )
+			margin-left: 0
+			border-radius: var(--border)
+		&__info
+			max-width: 495px
+			margin-top: 24px
+			padding-left: 0
+			margin-right: auto
+		&__title
+			text-align: center
+		&__btn
+			margin-top: 32px
+
+	.why
+		padding: 50px 0 60px
+		&__title
+			margin-bottom: 24px
+		&__item
+			&:nth-of-type(1)
+				.why
+					&__img
+						right: -180px
+			&:nth-of-type(2)
+				.why
+					&__img
+						right: -50px
+						bottom: 10px
+						max-width: 200px
+			&:nth-of-type(3)
+				.why
+					&__img
+						right: -180px
+			&:nth-of-type(4)
+				.why
+					&__img
+						right: -120px
+						bottom: -50px
+			&:nth-of-type(5)
+				.why
+					&__img
+						right: -60px
+			&.--w2
+				min-height: auto
+		&__decor
+			&-item
+				&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+					display: none
+
+	.reviews
+		padding: 50px 0 60px
+		&__slider
+			&-wrap
+				height: 100%
+			&-slide
+				// width: 100%
+				height: 498px
+				align-items: center
+				flex-direction: column
+				display: flex
+
+				&.swiper-slide-active
+					// width: 100%
+					height: 498px
+					.reviews
+						&__img
+							margin-top: 0
+							clip-path: path('M0 405.431V29.3819C0 28.2846 0 27.1889 0.00764444 26.0916C0.0122311 25.1687 0.0244622 24.2444 0.0489244 23.3215C0.102436 21.309 0.221689 19.2797 0.57792 17.2902C0.940267 15.2701 1.53195 13.3907 2.4661 11.5558C3.38343 9.7514 4.58055 8.10315 6.01006 6.67222C7.43804 5.24282 9.08619 4.04298 10.8887 3.12473C12.7204 2.19118 14.5978 1.59892 16.6144 1.23621C18.602 0.878094 20.6308 0.760252 22.6413 0.705157C23.5632 0.680671 24.4867 0.669958 25.4101 0.663836C26.5048 0.657715 27.601 0.657715 28.6957 0.657715H41.0681C42.7998 0.657715 44.2102 2.03462 44.2663 3.75439V4.92862C44.2663 11.4152 49.5195 16.6736 55.9997 16.6736H144C150.48 16.6736 155.733 11.4152 155.733 4.92862V3.76152C155.785 2.03843 157.197 0.657715 158.932 0.657715H171.304C172.4 0.657715 173.497 0.657715 174.591 0.663836C175.515 0.669958 176.437 0.680671 177.36 0.705157C179.371 0.760252 181.398 0.878094 183.387 1.23621C185.404 1.59892 187.281 2.19118 189.113 3.12473C190.915 4.04298 192.562 5.24282 193.991 6.67222C195.421 8.10315 196.618 9.7514 197.535 11.5558C198.47 13.3907 199.061 15.2701 199.424 17.2902C199.78 19.2797 199.899 21.309 199.953 23.3215C199.977 24.2444 199.988 25.1687 199.994 26.0916C200 27.1889 200 28.2846 200 29.3819V405.431C200 406.528 200 407.624 199.994 408.721C199.988 409.644 199.977 410.568 199.953 411.491C199.899 413.503 199.78 415.533 199.424 417.522C199.061 419.542 198.47 421.423 197.535 423.258C196.618 425.061 195.421 426.709 193.991 428.139C192.562 429.571 190.915 430.77 189.113 431.688C187.281 432.621 185.404 433.214 183.387 433.576C181.398 433.933 179.371 434.054 177.36 434.107C176.437 434.132 175.515 434.143 174.591 434.149C173.497 434.155 172.4 434.155 171.304 434.155H28.6957C27.601 434.155 26.5048 434.155 25.4101 434.149C24.4867 434.143 23.5632 434.132 22.6413 434.107C20.6308 434.054 18.602 433.933 16.6144 433.576C14.5978 433.214 12.7204 432.621 10.8887 431.688C9.08619 430.77 7.43804 429.571 6.01006 428.139C4.58055 426.709 3.38343 425.061 2.4661 423.258C1.53195 421.423 0.940267 419.542 0.57792 417.522C0.221689 415.533 0.102436 413.503 0.0489244 411.491C0.0244622 410.568 0.0122311 409.644 0.00764444 408.721C0 407.624 0 406.528 0 405.431Z')
+			&-controls
+				display: flex
+				flex-direction: column-reverse
+			&-pagination
+				margin-top: 32px
+			&-arrows
+				width: 100%
+				margin-top: 24px
+				max-width: 150px
+				margin-left: auto
+				margin-right: auto
+				display: flex
+				flex-wrap: wrap
+				align-items: center
+				justify-content: space-between
+			&-arrow
+				top: 0
+				margin-top: 0
+				position: relative
+				transform: none
+				&.swiper-button-prev
+					left: 0
+				&.swiper-button-next
+					right: 0
+		&__person
+			margin-bottom: 24px
+		&__img
+			height: 430px !important
+			width: auto
+			margin-left: auto
+			margin-right: auto
+
+	.quest
+		&__subtitle
+			font-size: 22px
+			line-height: 32px
+			margin-bottom: 24px
+		&__call
+			margin-top: 32px
+			&-link
+				font-size: 34px
+
+	.contacts
+		padding: 270px 0 40px
+		&__wrap
+			display: flex
+			max-width: 530px
+			margin-top: -32px
+			margin-left: auto
+			margin-right: auto
+			flex-direction: column-reverse
+		&__info
+			padding: 40px 40px 46px
+		&__img
+			z-index: 1
+			width: 100%
+			height: 150px
+			max-width: 220px
+			margin-top: 0
+			margin-right: 24px
+			margin-bottom: -24px
+
+@media screen and (max-width: 767px)
+	.h1
+		font-size: 40px
+		line-height: 50px
+
+	.h2
+		font-size: 28px
+		line-height: 38px
+
+	.h3
+		font-size: 22px
+		line-height: 32px
+
+	.h4
+		font-size: 18px
+		line-height: 26px
+
+	.form
+		&.--w3
+			.form
+				&__fields
+					grid-template-columns: auto
+				&__btn
+					grid-column: auto
+
+	.intro
+		padding: 120px 0 150px
+		&__info
+			text-align: center
+		&__label
+			margin-left: auto
+			margin-right: auto
+		&__title
+			margin-bottom: 10px
+		&__subtitle
+			padding-left: 0
+			&:before
+				display: none
+		&__act
+			z-index: 1
+			bottom: -80px
+			left: 50%
+			width: 100%
+			transform: translateX(-50%)
+			align-items: center
+			flex-direction: column
+			position: absolute
+		&__desc
+			max-width: 290px
+			margin-top: 16px
+			margin-left: 0
+			&:before
+				display: none
+			br
+				display: none
+		&__preview
+			margin-top: 16px
+		&__note
+			margin-bottom: 0
+			&:before
+				width: 200px
+				height: 200px
+			&-icon
+				margin-bottom: 8px
+		&__decor
+			display: none
+
+	.pros
+		margin-top: -40px
+		&__list
+			grid-template-columns: repeat(2, 1fr)
+		&__item
+			min-height: 200px
+			&:last-of-type
+				grid-column: 1/3
+
+	.quiz
+		&__title
+			max-width: 450px
+			margin-bottom: 24px
+			margin-left: auto
+			margin-right: auto
+			br
+				display: none
+
+	.consult
+		padding: 40px 0 50px
+		&__info
+			max-width: 100%
+			text-align: center
+		&__subtitle
+			font-size: 20px
+			line-height: 30px
+		&__pros
+			gap: 16px
+			align-items: center
+		&__preview
+			margin-top: 24px
+			transform: translateX(-50%)
+			position: relative
+		&__person
+			bottom: 120px
+		&__form
+			margin-top: -48px
+			.form
+				&__fields
+					grid-template-columns: auto
+				&__btn
+					grid-column: auto
+
+	.qual
+		padding: 40px 0 50px
+		&__img
+			top: 80px
+		&__list
+			gap: 10px
+		&__item
+			padding: 16px 8px
+		&__name
+			font-size: 16px
+		&__text
+			line-height: 22px
+			br
+				display: none
+
+	.type
+		padding: 40px 0 50px
+		&__item
+			min-height: 360px
+		&__img
+			height: 150px
+		&__info
+			height: calc( 100% - 150px )
+		&__name
+			margin: 10px 0
+		&__btn
+			font-size: 14px
+			&.--md
+				min-height: 66px
+		&__decor
+			display: none
+
+	.order
+		&__subtitle
+			font-size: 20px
+			line-height: 30px
+		&__fields
+			grid-template-columns: auto
+			justify-content: unset
+
+	.gallery
+		padding: 40px 0 50px
+		&__slider
+			&-slide
+				height: 350px
+				&.swiper-slide-active
+					height: 350px
+
+	.delivery
+		padding: 40px 0 50px
+		&__img
+			height: 350px
+		&__btn
+			font-size: 16px
+
+	.why
+		&__list
+			gap: 16px
+			margin: 0
+		&__item
+			width: 100%
+			margin: 0
+			&.--w2
+				width: 100%
+			&:nth-of-type(1)
+				.why
+					&__img
+						right: -50px
+			&:nth-of-type(2)
+				.why
+					&__img
+						right: 0
+			&:nth-of-type(3)
+				.why
+					&__img
+						right: -70px
+			&:nth-of-type(4)
+				.why
+					&__img
+						right: -70px
+						bottom: -20px
+			&:nth-of-type(5)
+				.why
+					&__img
+						right: 20px
+		&__decor
+			display: none
+
+	.reviews
+		padding: 40px 0 50px
+		&__slider
+			&-arrows
+				margin-top: 0
+			&-arrow
+				top: 50%
+				margin-top: 24px
+				transform: translateY(-50%)
+				position: absolute
+				&.swiper-button-prev
+					left: 50px
+				&.swiper-button-next
+					right: 50px
+
+	.quest
+		padding: 40px 0 120px
+		&__subtitle
+			font-size: 20px
+			line-height: 30px
+		&__call
+			display: none
+
+	.contacts
+		&__info
+			padding: 32px 24px
+		&__img
+			height: 130px
+			margin-right: auto
+
+@media screen and (max-width: 580px)
+	.h1
+		font-size: 24px
+		line-height: 32px
+
+	.h2
+		font-size: 24px
+		line-height: 32px
+
+	.h4
+		font-size: 16px
+		line-height: 22px
+
+	.logo
+		&__img
+			width: 84px
+
+	.form
+		padding: 24px 16px
+		&__title
+			font-size: 24px
+			margin-bottom: 24px
+		&__subtitle
+			font-size: 14px
+			line-height: 24px
+			margin-bottom: 24px
+		&__fields
+			gap: 20px
+		&__policy
+			margin-top: 20px
+
+		&.--w3
+			.form
+				&__policy
+					font-size: 12px
+					a
+						font-size: 12px
+
+	.intro
+		padding: 96px 0 84px
+		&__label
+			font-size: 14px
+			padding: 6px 14px
+		&__subtitle
+			max-width: 260px
+			margin-left: auto
+			margin-right: auto
+			br
+				display: none
+		&__preview
+			margin-top: 0
+		&__img
+			width: 500px
+		&__note
+			right: 40px
+			left: auto
+			bottom: 205px
+			transform: none
+			margin-left: 0
+			&:before
+				margin-top: 5px
+				width: 170px
+				height: 170px
+			&-text
+				font-size: 10px
+				line-height: 14px
+				max-width: 134px
+		&__act
+			bottom: -45px
+
+	.pros
+		margin-top: -15px
+		&__list
+			grid-template-columns: auto
+		&__item
+			&:last-of-type
+				grid-column: auto
+		&__text
+			line-height: 24px
+
+	.quiz
+		padding: 32px 0 32px
+
+	.consult
+		padding: 32px 0
+		&__subtitle
+			font-size: 18px
+			line-height: 28px
+		&__pros
+			gap: 12px
+			margin-left: 26px
+			margin-top: 16px
+			&-item
+				font-size: 14px
+				line-height: 20px
+				text-align: left
+				padding: 24px 24px 24px 38px
+		&__img
+			width: 350px
+		&__person
+			bottom: 52px
+			&-name
+				font-size: 16px
+				padding: 5px 30px
+			&-duty
+				margin-top: 4px
+		&__form
+			margin-top: -22px
+			.form
+				&__btn
+					font-size: 14px
+
+	.qual
+		padding: 30px 0
+		&__img
+			top: 100px
+			width: 220px
+		&__list
+			margin-top: 194px
+		&__item
+			min-height: 220px
+			justify-content: flex-start
+		&__icon
+			margin-bottom: 12px
+		&__name
+			max-width: 140px
+			margin-bottom: 14px
+			margin-left: auto
+			margin-right: auto
+			display: block
+			i
+				display: block
+		&__text
+			font-size: 12px
+			line-height: 18px
+
+	.type
+		padding: 22px 0 38px
+		&__title
+			margin-bottom: 16px
+		&__list
+			gap: 10px
+		&__item
+			min-height: 322px
+		&__img
+			height: 123px
+		&__info
+			height: calc( 100% - 123px )
+		&__name
+			font-size: 16px
+			line-height: 20px
+			margin: 10px 0 6px
+		&__text
+			font-size: 12px
+			line-height: 18px
+			margin-bottom: 16px
+		&__btn
+			font-size: 12px
+			&.--md
+				min-height: 56px
+
+	.order
+		padding: 32px 0 38px
+		&__title
+			margin-bottom: 12px
+		&__subtitle
+			font-size: 16px
+			line-height: 22px
+		&__fields
+			gap: 26px
+		&__policy
+			font-size: 12px
+			margin-top: 30px
+			a
+				font-size: 12px
+
+	.gallery
+		padding: 32px 0 20px
+		&__title
+			margin-bottom: 22px
+			br
+				display: none
+			i
+				display: block
+		&__slider
+			&-slide
+				height: 225px
+				&.swiper-slide-active
+					height: 225px
+
+	.delivery
+		padding: 0
+		&__img
+			left: 50%
+			height: 330px
+			border-radius: 0
+			width: calc( 100% + 32px )
+			transform: translateX(-50%)
+			position: relative
+			overflow: visible
+			img
+				max-width: none
+				max-height: none
+				width: max-content
+		&__list
+			gap: 22px
+		&__item
+			align-items: flex-start
+		&__text
+			font-size: 16px
+			padding-left: 28px
+			br
+				display: none
+			i
+				display: block
+		&__btn
+			font-size: 18px
+			margin-top: 24px
+			flex-direction: column
+			i
+				display: block
+
+	.why
+		padding: 32px 0
+		&__title
+			max-width: 280px
+			margin-left: auto
+			margin-right: auto
+		&__item
+			padding: 32px 18px
+			min-height: 235px !important
+			&:nth-of-type(1)
+				.why
+					&__img
+						right: -150px
+						bottom: -50px
+						max-width: 290px
+			&:nth-of-type(2)
+				.why
+					&__img
+						right: -40px
+						bottom: 0
+						max-width: 160px
+			&:nth-of-type(3)
+				.why
+					&__img
+						right: -145px
+						max-width: 270px
+			&:nth-of-type(4)
+				.why
+					&__img
+						right: -130px
+						bottom: -65px
+						transform: rotate(10deg)
+			&:nth-of-type(5)
+				.why
+					&__img
+						right: -70px
+						bottom: 10px
+		&__info
+			max-width: 230px
+		&__name
+			font-size: 18px
+			line-height: 28px
+			margin-bottom: 12px
+		&__text
+			line-height: 22px
+
+	.reviews
+		padding: 22px 0
+		&__slider
+			&-arrow
+				margin-top: 52px
+				&.swiper-button-prev
+					left: 15px
+				&.swiper-button-next
+					right: 15px
+			&-pagination
+				margin-top: 22px
+
+	.quest
+		&__subtitle
+			font-size: 16px
+			line-height: 22px
+			max-width: 330px
+			margin-left: auto
+			margin-right: auto
+			br
+				display: none
+		&__form
+			.form
+				&__btn
+					font-size: 14px
+
+	.contacts
+		padding: 255px 0 20px
+		&__img
+			margin-bottom: -10px
+			max-width: 187px
+			height: 120px
+		&__info
+			padding: 19px 17px 30px
+		&__title
+			font-size: 18px
+		&__list
+			gap: 22px
+		&__text
+			font-size: 14px

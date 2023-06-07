@@ -38,3 +38,17 @@
     .field
       &__area
         color: red
+        &::placeholder
+          color: red
+
+@media screen and (max-width: 580px)
+  .field
+    &__icon
+      left: 35px
+    &__area
+      font-size: 16px
+      padding: 26px 25px 26px 64px
+    &.--md
+      .field
+        &__area
+          padding: 26px 25px 26px 64px

@@ -41,3 +41,19 @@
 .field.--error .field__area {
   color: red;
 }
+.field.--error .field__area::placeholder {
+  color: red;
+}
+
+@media screen and (max-width: 580px) {
+  .field__icon {
+    left: 35px;
+  }
+  .field__area {
+    font-size: 16px;
+    padding: 26px 25px 26px 64px;
+  }
+  .field.--md .field__area {
+    padding: 26px 25px 26px 64px;
+  }
+}

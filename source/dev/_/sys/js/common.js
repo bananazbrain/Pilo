@@ -52,6 +52,7 @@ window.onload = () => {
         clickable: true,
       },
       breakpoints: {
+
         1025: {
           spaceBetween: 76,
           slidesOffsetBefore: -100,
@@ -66,7 +67,7 @@ window.onload = () => {
   let reviewsSlider = document.querySelector('.reviews__slider');
   if (reviewsSlider) {
     let reviewsSliderSwiper = new Swiper(reviewsSlider, {
-      slidesPerView: 'auto',
+      slidesPerView: 1,
       spaceBetween: 16,
       speed: 900,
       navigation: {
@@ -79,7 +80,11 @@ window.onload = () => {
         clickable: true,
       },
       breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
         1025: {
+          slidesPerView: 'auto',
           spaceBetween: 60,
           slidesOffsetBefore: -15,
           centeredSlides: true,
@@ -149,18 +154,30 @@ window.onload = () => {
   // VALIDATOR
   let fields = document.querySelectorAll('.field');
   fields.forEach((field) => {
+    field.wrap = field.querySelector('.field__wrap');
     field.area = field.querySelector('.field__area');
 
     field.addEventListener('focusin', () => {
+      field.classList.add('--focus');
       field.classList.remove('--error');
     })
     field.addEventListener('focusout', () => {
+      field.classList.remove('--focus');
     })
+
+    field.area.addEventListener('change', () => {
+      if (field.area.value.length >= 1) {
+        field.classList.add('--filled');
+      } else {
+        field.classList.remove('--filled');
+      }
+    });
 
     if (field.classList.contains('--name')) {
       field.area.addEventListener('input', () => {
         field.area.value = field.area.value.replace(/[^\D]/g, '');
       });
+
     } else if (field.classList.contains('--tel')) {
       field.area.mask = IMask(field.area, {
         mask: '+{7} (000) 000-00-00',
@@ -180,7 +197,7 @@ window.onload = () => {
       field.area.addEventListener('field', () => {
       });
     }
-  })
+  });
 
   let validateForms = document.querySelectorAll('form');
   let modalThanks = document.getElementById('modal-thanks');
@@ -191,55 +208,54 @@ window.onload = () => {
       let popupModalForm = form.querySelector('.modal__form');
       let popupSendOkAttr = form.getAttribute('data-message-ok');
 
-      // btnSubmit.addEventListener('click', (event) => {
-      //   let errors = 0;
+      btnSubmit.addEventListener('click', (event) => {
+        let errors = 0;
 
-      //   if (fieldsRequired.length > 0) {
-      //     fieldsRequired.forEach((field) => {
-      //       let value = field.area.value;
+        if (fieldsRequired.length > 0) {
+          fieldsRequired.forEach((field) => {
+            let value = field.area.value;
 
-      //       // field name
-      //       if (field.classList.contains('--name')) {
-      //         if (value.length < 2) {
-      //           errors++;
-      //           field.classList.add('--error');
-      //         } else {
-      //           field.classList.remove('--error');
-      //         }
-      //       }
+            if (field.classList.contains('--name')) {
+              if (value.length < 2) {
+                errors++;
+                field.classList.add('--error');
+              } else {
+                field.classList.remove('--error');
+              }
+            }
 
-      //       // field tel
-      //       if (field.classList.contains('--tel')) {
-      //         if (value.length < 11) {
-      //           errors++;
-      //           field.classList.add('--error');
-      //         } else {
-      //           field.classList.remove('--error');
-      //         }
-      //       }
-      //     })
-      //   }
+            if (field.classList.contains('--tel')) {
+              if (value.length < 18) {
+                errors++;
+                field.classList.add('--error');
+              } else {
+                field.classList.remove('--error');
+              }
+            }
+          })
+        }
 
-      //   if (errors == 0) {
-      //     let xhr = new XMLHttpRequest();
-      //     let formData = new FormData(form);
-      //     xhr.open('POST', '/order.php');
-      //     xhr.send(formData);
+        if (errors == 0) {
+          let xhr = new XMLHttpRequest();
+          let formData = new FormData(form);
+          xhr.open('POST', 'order.php');
+          xhr.send(formData);
 
-      //     xhr.onload = function () {
-      //       Fancybox.close();
+          xhr.onload = function () {
+            Fancybox.close();
 
-      //       Fancybox.show([{
-      //         src: '#modal-thanks',
-      //         type: 'inline'
-      //       }]);
-      //     }
-      //     event.preventDefault();
+            Fancybox.show([{
+              src: '#modal-thanks',
+              type: 'inline'
+            }]);
 
-      //   } else {
-      //     event.preventDefault();
-      //   }
-      // })
+          }
+          event.preventDefault();
+
+        } else {
+          event.preventDefault();
+        }
+      })
     })
   }
 }

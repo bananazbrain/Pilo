@@ -116,3 +116,42 @@
 			font-size: 16px
 			max-width: 250px
 			margin-left: 20px
+
+@media screen and (max-width: 1024px)
+	.header
+		padding: 12px 0
+		border-bottom: 1px solid rgba(161, 174, 197, 0.3)
+		&__logo
+			max-width: 110px
+		&__map
+			display: none
+		&__socials
+			display: none
+		&__contacts
+			&-time
+				display: none
+			&-callback
+				display: none
+		&__btn
+			font-size: 14px
+			max-width: 220px
+			margin-left: -50px
+			&.--sm
+				min-height: 58px
+
+@media screen and (max-width: 767px)
+	.header
+		&__btn
+			display: none
+
+@media screen and (max-width: 580px)
+	.header
+		padding: 8px 0 10px
+		&__logo
+			max-width: 84px
+		&__contacts
+			&-tel
+				font-size: 18px
+				&:before
+					top: 2px
+					margin-left: -25px
