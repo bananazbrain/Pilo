@@ -163,6 +163,17 @@ window.onload = () => {
     });
   }
 
+  // QUIZ
+  let quiz = document.querySelector('.quiz');
+  if (quiz) {
+    let qiuzSteps = quiz.querySelectorAll('.quiz__step');
+
+    qiuzSteps.forEach((step) => {
+
+    })
+
+  }
+
   // MAP
   let map = document.querySelector('#map');
   if (map && ymaps) {
