@@ -367,7 +367,7 @@
 		margin-bottom: 40px
 	&__wrap
 		padding: 26px 65px 35px
-		min-height: 710px
+		min-height: 732px
 		background: var(--color-white)
 		border-radius: var(--border)
 		box-shadow: 0px 16px 92px rgba(0, 0, 0, 0.07)
@@ -858,7 +858,7 @@
 		font-weight: 700
 		margin-bottom: 38px
 	&__slider
-		max-width: 750px
+		max-width: 770px
 		margin-left: auto
 		margin-right: auto
 		overflow: visible
@@ -867,30 +867,31 @@
 			align-items: flex-start
 		&-slide
 			opacity: 0
-			width: 202px
+			width: 225px
 			height: 517px
 			transition: var(--transition)
 			overflow: hidden
-			.reviews
-				&__img
-					height: 434px
+			// .reviews
+			// 	&__img
+			// 		height: 434px
 			&.swiper-slide-active
-				width: 231px
+				width: 260px
 				height: 573px
-				.reviews
-					&__img
-						height: 498px
-						margin-top: -5px
-				&.--sm
-					.reviews
-						&__img
-							height: 350px
+				margin-top: -5px
+				// .reviews
+				// 	&__img
+				// 		height: 530px
+				// 		margin-top: -5px
+				// &.--sm
+				// 	.reviews
+				// 		&__img
+				// 			height: 350px
 			&.swiper-slide-prev, &.swiper-slide-active, &.swiper-slide-next
 				opacity: 1
-			&.--sm
-				.reviews
-					&__img
-						height: 300px
+			// &.--sm
+			// 	.reviews
+			// 		&__img
+			// 			height: 300px
 		&-arrow
 			margin-top: 30px
 			&.swiper-button-prev
@@ -904,36 +905,18 @@
 					background: #C7C7C7
 				&-bullet-active
 					background: var(--color-primary)
-	&__person
-		display: flex
-		align-items: center
-		margin-bottom: 32px
-	&__icon
-		width: 51px
-		height: 51px
-		background: #D8D8D8
-		border-radius: 50%
-		overflow: hidden
-	&__info
-		width: calc( 100% - 51px )
-		padding-left: 16px
-	&__name
-		font-size: 18px
-		font-weight: 600
-		margin-bottom: 2px
-	&__city
-		font-size: 14px
-		color: var(--color-gray-2)
-	&__img
-		width: 100%
-		height: 100%
-		transition: var(--transition)
-		img
-			width: 100%
-			height: 100%
-			object-position: top
+
+	// &__img
+	// 	width: 100%
+	// 	height: 100%
+	// 	transition: var(--transition)
+	// 	img
+	// 		width: 100%
+	// 		height: 100%
+	// 		// object-position: top
 	&__decor
 		&-item
+			z-index: 1
 			&:nth-of-type(1)
 				left: 200px
 				bottom: 200px
@@ -1616,6 +1599,20 @@
 			margin-left: 0
 			&:before
 				display: none
+			&:after
+				top: 50%
+				left: 50%
+				z-index: -1
+				margin-top: 15px
+				transform: translate(-50%, -50%)
+				width: 415px
+				height: 110px
+				border-radius: 50%
+				filter: blur(54px)
+				-webkit-filter: blur(54px)
+				background: rgba(255, 255, 255, 0.8)
+				position: absolute
+				content: ""
 			br
 				display: none
 		&__preview
@@ -1881,8 +1878,7 @@
 		&__img
 			width: 500px
 		&__note
-			right: 40px
-			left: auto
+			left: 30px
 			bottom: 205px
 			transform: none
 			margin-left: 0

@@ -373,7 +373,7 @@ block content
 					+qual('_/uploads/qual-4.svg', 'Обладает высокой <br>прочностью', 'Многослойная структура фанеры обеспечивает высокую прочность <br>и устойчивость к деформациям')
 					+qual('_/uploads/qual-5.svg', 'Имеет эстетический вид', 'Фанеру можно окрасить, лакировать <br>и шлифовать, достигая желаемого внешнего вида')
 					+qual('_/uploads/qual-6.svg', 'Выгоднее аналогов', 'Фанера является более <br>доступным материалом <br>по сравнению с альтернативами')
-				.qual__btn.btn.--primary Заказать фанеру
+				a.qual__btn.btn.--primary(data-fancybox data-src="#modal-order" href="javascript:;") Заказать фанеру
 		.qual__bg.bg-img
 			picture
 				source(srcset="_/uploads/qual-bg.webp" type="image/webp")
@@ -561,60 +561,23 @@ block content
 				.reviews__slider.swiper
 					.reviews__slider-wrap.swiper-wrapper
 						.reviews__slider-slide.swiper-slide
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Александр
-									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews/Александр (клиент).png", alt="")
+								img(src="_/uploads/reviews/Александр (клиент).jpg", alt="" loading="lazy")
 						.reviews__slider-slide.swiper-slide
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Евгения
-									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews/Евгения (клиент).png", alt="")
+								img(src="_/uploads/reviews/Евгения (клиент).jpg", alt="" loading="lazy")
 						.reviews__slider-slide.swiper-slide
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Егор
-									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews/Егор (клиент).png", alt="")
+								img(src="_/uploads/reviews/Егор (клиент).jpg", alt="" loading="lazy")
 						.reviews__slider-slide.swiper-slide
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Сергей
-									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews/Сергей (клиент).png", alt="")
-						
+								img(src="_/uploads/reviews/Сергей (клиент).jpg", alt="" loading="lazy")
 						.reviews__slider-slide.swiper-slide.--sm
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Михаил Аветов
-									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews/reviews-1.png", alt="")
+								img(src="_/uploads/reviews/reviews-1.jpg", alt="" loading="lazy")
 						.reviews__slider-slide.swiper-slide.--sm
-							.reviews__person
-								.reviews__icon.cover
-									img(src="_/uploads/reviews.png", alt="")
-								.reviews__info
-									.reviews__name Михаил Аветов
-									.reviews__city г. Москва
 							.reviews__img
-								img(src="_/uploads/reviews/reviews-2.png", alt="")
+								img(src="_/uploads/reviews/reviews-2.jpg", alt="" loading="lazy")
 				.reviews__slider-controls
 					.reviews__slider-pagination.swiper-pagination
 					.reviews__slider-arrows
@@ -624,9 +587,9 @@ block content
 							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 11L0.999999 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
 		.reviews__decor
 			.reviews__decor-item.decor-item
-				img(src="_/uploads/decor/decor-4.png", alt="")
+				img(src="_/uploads/decor/decor-4.png", alt="" loading="lazy")
 			.reviews__decor-item.decor-item
-				img(src="_/uploads/decor/decor-5.png", alt="")
+				img(src="_/uploads/decor/decor-5.png", alt="" loading="lazy")
 
 	.quest.bg
 		.case

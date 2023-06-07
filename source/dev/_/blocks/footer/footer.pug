@@ -16,27 +16,17 @@ footer.footer
 				.footer__title.h5 Навигация по сайту
 				.footer__nav-links.row
 					.footer__nav-col
-						a.footer__link(href="") Главная
-						a.footer__link(href="") Расчет стоимости
-						a.footer__link(href="") Помощь в подборе
-						a.footer__link(href="") Преимущества фанеры
-						a.footer__link(href="") Виды работ
-						a.footer__link(href="") Главная
-						a.footer__link(href="") Расчет стоимости
-						a.footer__link(href="") Помощь в подборе
-						a.footer__link(href="") Преимущества фанеры
-						a.footer__link(href="") Виды работ
-						a.footer__link(href="") Главная
-						a.footer__link(href="") Расчет стоимости
-						a.footer__link(href="") Помощь в подборе
-						a.footer__link(href="") Преимущества фанеры
-						a.footer__link(href="") Виды работ
+						a.footer__link(href="#intro") Главная
+						a.footer__link(href="#quiz") Расчет стоимости
+						a.footer__link(href="#consult") Помощь в подборе
+						a.footer__link(href="#qual") Преимущества фанеры
+						a.footer__link(href="#type") Виды работ
 					.footer__nav-col
-						a.footer__link(href="") Доставка и оплата
-						a.footer__link(href="") Почему мы
-						a.footer__link(href="") Распил фанеры
-						a.footer__link(href="") Наши клиенты
-						a.footer__link(href="") Контакты
+						a.footer__link(href="#delivery") Доставка и оплата
+						a.footer__link(href="#why") Почему мы
+						a.footer__link(href="#order2") Распил фанеры
+						a.footer__link(href="#reviews") Наши клиенты
+						a.footer__link(href="#contacts") Контакты
 			.footer__contacts
 				a.footer__tel(href="tel:+79175030777") +7 (917) 503-07-77
 				.footer__list
@@ -52,7 +42,6 @@ footer.footer
 			.footer__links.tac
 				a.footer__policy.link.--primary(href="/politika.pdf" target="_blank") Политика конфиденциальности
 				.footer__copy Copyright 2023 © Все права защищены
-
 
 .modal.--static#modal-callback
 	form.modal__form.form
@@ -107,6 +96,25 @@ footer.footer
 					input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
 		.form__btn.btn.--primary Получить консультацию
 		.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
+
+.modal.--static#modal-order
+	form.modal__form.form
+		.form__title.h3.tac Заказать фанеру
+		.form__text.h5.tac Введите телефон, наш специалист свяжется с вами в течение 5 минут для уточнения всех деталей
+		.form__fields
+			.form__field.field.--required.--name
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/person-gray.svg", alt="")
+					input.field__area(type="name" name="name" placeholder="Как к вам обращаться*")
+			.form__field.field.--required.--tel
+				.field__wrap
+					.field__icon
+						img(src="_/uploads/icons/tel-gray.svg", alt="")
+					input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
+		.form__btn.btn.--primary Заказать фанеру
+		.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
+
 
 .modal.--static#modal-thanks
 	.modal__form.form
