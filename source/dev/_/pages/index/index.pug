@@ -80,13 +80,14 @@ block content
 		.case
 			.quiz__title.h2.tac #[h2 #[strong Рассчитайте стоимость заказа за 1 минуту,] #[br]ответив на 4 простых вопроса]
 			.quiz__wrap
+				//- ПЕРВЫЙ ШАГ
 				.quiz__step.--active
 					.quiz__head
 						.quiz__num 1 вопрос из 4
-						.quiz__arrow.--next
+						.quiz__arrow.quiz-next
 							img(src="_/uploads/icons/arrow.svg", alt="")
 					.quiz__bar
-						<svg width="235" height="25" viewBox="0 0 235 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="0.958984" width="233.043" height="25" rx="12.5" fill="#FCC636"/><mask id="mask0_284_5" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="235" height="25"><rect x="0.958984" width="233.043" height="25" fill="white"/></mask><g mask="url(#mask0_284_5)"><path opacity="0.22" d="M13.9833 25H2.12402L13.9833 0H25.8426L13.9833 25Z" fill="white"/><path opacity="0.22" d="M39.1589 25H27.5077L39.1589 0H51.0182L39.1589 25Z" fill="white"/><path opacity="0.22" d="M64.5409 25H52.6816L64.5409 0H76.4002L64.5409 25Z" fill="white"/><path opacity="0.22" d="M89.9238 25H78.0646L89.9238 0H101.783L89.9238 25Z" fill="white"/><path opacity="0.22" d="M115.099 25H103.448L115.099 0H126.959L115.099 25Z" fill="white"/><path opacity="0.22" d="M140.482 25H128.623L140.482 0H152.342L140.482 25Z" fill="white"/><path opacity="0.22" d="M165.866 25H154.007L165.866 0H177.725L165.866 25Z" fill="white"/><path opacity="0.22" d="M191.04 25H179.389L191.04 0H202.899L191.04 25Z" fill="white"/><path opacity="0.22" d="M216.423 25H204.564L216.423 0H228.282L216.423 25Z" fill="white"/><path opacity="0.22" d="M241.806 25H229.947L241.806 0H253.666L241.806 25Z" fill="white"/></g></svg>
+						img(src="_/uploads/icons/bar.svg", alt="")
 					.quiz__body
 						.quiz__step-name.h4.tac Для каких задач вам нужна фанера?
 						.quiz__list
@@ -132,21 +133,181 @@ block content
 										img(src="_/uploads/icons/quest.svg", alt="")
 									.check__point
 									.check__text Другое
+				//- ВТОРОЙ ШАГ
 				.quiz__step
 					.quiz__head
 						.quiz__num 2 вопрос из 4
-						.quiz__arrow
+						.quiz__arrow.quiz-prev
 							img(src="_/uploads/icons/arrow.svg", alt="")
+						.quiz__arrow.quiz-next
+							img(src="_/uploads/icons/arrow.svg", alt="")
+					.quiz__bar
+						img(src="_/uploads/icons/bar.svg", alt="")
+					.quiz__body
+						.quiz__step-name.h4.tac Какой тип фанеры необходим?
+						.quiz__list
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="type" value="Ламинированная-Влагостойкая")
+								.check__wrap
+									.check__img.cover
+										img(src="_/uploads/quiz/step-2-item-1.jpg", alt="")
+									.check__point
+									.check__text Ламинированная /#[br]Влагостойкая фанера
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="type" value="Шлифованная фанера")
+								.check__wrap
+									.check__img.cover
+										img(src="_/uploads/quiz/step-2-item-2.jpg", alt="")
+									.check__point
+									.check__text Шлифованная фанера
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="type" value="Бакелитовая фанера (ФБ)")
+								.check__wrap
+									.check__img.cover
+										img(src="_/uploads/quiz/step-2-item-3.jpg", alt="")
+									.check__point
+									.check__text Бакелитовая фанера (ФБ)
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="type" value="Фанера ФК")
+								.check__wrap
+									.check__img.cover
+										img(src="_/uploads/quiz/step-2-item-4.jpg", alt="")
+									.check__point
+									.check__text Фанера ФК
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="type" value="Фанера ФСФ")
+								.check__wrap
+									.check__img.cover
+										img(src="_/uploads/quiz/step-2-item-5.jpg", alt="")
+									.check__point
+									.check__text Фанера ФСФ / Строительная
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="type" value="Нужна помощь")
+								.check__wrap
+									.check__img(style="background: #FBCC50")
+										img(src="_/uploads/icons/quest.svg", alt="")
+									.check__point
+									.check__text Не могу сказать, #[br]нужна помощь в выборе
+				//- ТРЕТИЙ ШАГ
 				.quiz__step
 					.quiz__head
 						.quiz__num 3 вопрос из 4
-						.quiz__arrow
+						.quiz__arrow.quiz-prev
 							img(src="_/uploads/icons/arrow.svg", alt="")
+						.quiz__arrow.quiz-next
+							img(src="_/uploads/icons/arrow.svg", alt="")
+					.quiz__bar
+						img(src="_/uploads/icons/bar.svg", alt="")
+					.quiz__body
+						.quiz__step-name.h4.tac Какая толщина необходима?
+						.quiz__list.--w6
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="3 мм")
+								.check__wrap
+									.check__point
+									.check__text 3 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="4 мм")
+								.check__wrap
+									.check__point
+									.check__text 4 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="6мм")
+								.check__wrap
+									.check__point
+									.check__text 6мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="9мм")
+								.check__wrap
+									.check__point
+									.check__text 9мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="10мм")
+								.check__wrap
+									.check__point
+									.check__text 10мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="12мм")
+								.check__wrap
+									.check__point
+									.check__text 12мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="15 мм")
+								.check__wrap
+									.check__point
+									.check__text 15 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="18 мм")
+								.check__wrap
+									.check__point
+									.check__text 18 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="21 мм")
+								.check__wrap
+									.check__point
+									.check__text 21 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="24 мм")
+								.check__wrap
+									.check__point
+									.check__text 24 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="30 мм")
+								.check__wrap
+									.check__point
+									.check__text 30 мм
+							.quiz__item.check.--radio
+								input.check__input(type="radio" name="thick" value="40 мм")
+								.check__wrap
+									.check__point
+									.check__text 40 мм
+						.quiz__act
+							.quiz__link.link.quiz-prev Вернуться назад
+							.quiz__btn.btn.--primary.quiz-next Продолжить
+				//- ЧЕТВЕРТЫЙ ШАГ
 				.quiz__step
 					.quiz__head
 						.quiz__num 4 вопрос из 4
-						.quiz__arrow
+						.quiz__arrow.quiz-prev
 							img(src="_/uploads/icons/arrow.svg", alt="")
+						.quiz__arrow.quiz-next
+							img(src="_/uploads/icons/arrow.svg", alt="")
+					.quiz__bar
+						img(src="_/uploads/icons/bar.svg", alt="")
+					.quiz__body
+						.quiz__step-name.h4.tac Нужна ли доставка?
+						.quiz__list
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="delivery" value="Да, нужна")
+								.check__wrap
+									.check__img
+										img(src="_/uploads/quiz/step-4-item-1.png", alt="")
+									.check__point
+									.check__text Да, нужна
+							.quiz__item.check.--img
+								input.check__input(type="radio" name="delivery" value="Заберу самостоятельно")
+								.check__wrap
+									.check__img.cover
+										img(src="_/uploads/quiz/step-4-item-2.jpg", alt="")
+									.check__point
+									.check__text Заберу самостоятельно
+						.quiz__act
+							.quiz__link.link.quiz-prev Вернуться назад
+							.quiz__btn.btn.--primary.quiz-next Продолжить
+				//- ФОРМА
+				.quiz__step
+					form.quiz__form.form
+						.form__title.tac Расчет готов!
+						.form__subtitle.h5.tac Введите номер телефона и получите информацию о стоимости фанеры с учетом СКИДКИ на свой мобильный телефон!
+						.form__fields
+							.form__field.field.--required.--tel
+								.field__wrap
+									.field__icon
+										img(src="_/uploads/icons/tel-gray.svg", alt="")
+									input.field__area(type="tel" name="tel" placeholder="Введите ваш телефон")
+							.form__btn.btn.--primary Получить персональное предложение
+						.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
+			
 			.quiz__decor
 				.quiz__decor-item.decor-item
 					img(src="_/uploads/decor/decor-4.png", alt="")

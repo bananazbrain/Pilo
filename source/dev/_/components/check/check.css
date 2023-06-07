@@ -61,6 +61,7 @@
 }
 .check.--img .check__text {
   font-weight: 600;
+  text-align: center;
 }
 .check.--img:hover .check__point {
   background: var(--color-primary);
@@ -75,4 +76,46 @@
 .check.--img.--checked .check__point:before {
   background: url("../../uploads/icons/check-brown.svg") no-repeat;
   background-size: contain;
+}
+.check.--radio .check__wrap {
+  display: flex;
+  align-items: center;
+}
+.check.--radio .check__point {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #C5C5C5;
+}
+.check.--radio .check__text {
+  font-weight: 600;
+  padding-left: 10px;
+}
+.check.--radio:hover .check__point {
+  border-color: var(--color-primary);
+}
+.check.--radio.--checked .check__point {
+  border-width: 5px;
+  border-color: var(--color-primary);
+}
+
+@media screen and (max-width: 1024px) {
+  .check.--img .check__img {
+    border-radius: var(--border);
+  }
+}
+@media screen and (max-width: 580px) {
+  .check.--img .check__img {
+    height: 95px;
+    margin-bottom: 16px;
+    border-radius: var(--border-sm);
+  }
+  .check.--img .check__point {
+    top: 74px;
+    width: 36px;
+    height: 36px;
+  }
+  .check.--img .check__text {
+    font-size: 14px;
+  }
 }
