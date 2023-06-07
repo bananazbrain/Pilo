@@ -21,7 +21,7 @@ block content
 					.side-panel__text WhatsApp
 			.side-panel__close
 
-	.intro.bg
+	.intro.bg.anchore
 		.case
 			.intro__wrap.row
 				.intro__info
@@ -31,52 +31,53 @@ block content
 					.intro__act.row
 						a.intro__btn.btn.--primary.--img(data-fancybox data-src="#modal-price" href="javascript:;") Узнать стоимость
 							.btn__img
-								img(src="_/uploads/price.png" srcset="_/uploads/price-2x.png 2x", alt="")
+								img(src="_/uploads/price.png" srcset="_/uploads/price-2x.png 2x", alt="" loading="lazy")
 						.intro__desc Оставьте заявку и получите точный расчет под ваш объем #[br]#[strong в течение 5 минут]
 				.intro__preview
 					.intro__img
-						img(src="_/uploads/intro-img.png" srcset="_/uploads/intro-img-2x.png 2x", alt="")
+						img(src="_/uploads/intro-img.png" srcset="_/uploads/intro-img-2x.png 2x", alt="" loading="lazy")
 					.intro__note
 						.intro__note-icon
-							img(src="_/uploads/icons/check-green.svg", alt="")
+							img(src="_/uploads/icons/check-green.svg", alt="" loading="lazy")
 						.intro__note-text.t1.tac
 							p Наша фанера имеет #[strong все необходимые сертификаты.]
 							p Она #[strong абсолютно безопасна] для вашего здоровья
 		.intro__bg.bg-img
 			picture
 				source(srcset="_/uploads/intro-bg.webp" type="image/webp")
-				img(src="_/uploads/intro-bg.jpg" alt="")
+				img(src="_/uploads/intro-bg.jpg" alt="" loading="lazy")
 		.intro__decor
 			.intro__decor-item.decor-item
-				img(src="_/uploads/decor/decor-1.png", alt="")
+				img(src="_/uploads/decor/decor-1.png", alt="" loading="lazy")
 			.intro__decor-item.decor-item
-				img(src="_/uploads/decor/decor-2.png", alt="")
+				img(src="_/uploads/decor/decor-2.png", alt="" loading="lazy")
 			.intro__decor-item.decor-item
-				img(src="_/uploads/decor/decor-3.png", alt="")
+				img(src="_/uploads/decor/decor-3.png", alt="" loading="lazy")
+		.anchore__link#intro
 
 	.pros
 		.case
 			.pros__list
 				.pros__item
 					.pros__icon
-						img(src="_/uploads/pros-1.png" srcset="_/uploads/pros-1-2x.png 2x", alt="")
+						img(src="_/uploads/pros-1.png" srcset="_/uploads/pros-1-2x.png 2x", alt="" loading="lazy")
 					.pros__info
 						.pros__name.h5 #[h5 Оплата по факту]
 						.pros__text Оплачивайте как вам удобно: после получения заказа, либо по предоплате, наличными #[br]или по карте
 				.pros__item
 					.pros__icon
-						img(src="_/uploads/pros-2.png" srcset="_/uploads/pros-2-2x.png 2x", alt="")
+						img(src="_/uploads/pros-2.png" srcset="_/uploads/pros-2-2x.png 2x", alt="" loading="lazy")
 					.pros__info
 						.pros__name.h5 #[h5 Отправка через #[br]1 час после заказа]
 						.pros__text Загружаем машину сразу же после заказа, #[br]вы получаете фанеру  в этот же день
 				.pros__item
 					.pros__icon
-						img(src="_/uploads/pros-3.png" srcset="_/uploads/pros-3-2x.png 2x", alt="")
+						img(src="_/uploads/pros-3.png" srcset="_/uploads/pros-3-2x.png 2x", alt="" loading="lazy")
 					.pros__info
 						.pros__name.h5 #[h5 Распил фанеры #[br]по вашим размерам]
 						.pros__text Выполняем фрезерную и лазерную резку #[br]фанеры на станках с ЧПУ
 
-	form.quiz
+	form.quiz.anchore
 		.case
 			.quiz__title.h2.tac #[h2 #[strong Рассчитайте стоимость заказа за 1 минуту,] #[br]ответив на 4 простых вопроса]
 			.quiz__wrap
@@ -85,9 +86,9 @@ block content
 					.quiz__head
 						.quiz__num 1 вопрос из 4
 						.quiz__arrow.quiz-next.quiz__btn-next
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 					.quiz__bar
-						img(src="_/uploads/icons/bar.svg", alt="")
+						img(src="_/uploads/icons/bar.svg", alt="" loading="lazy")
 					.quiz__body
 						.quiz__step-name.h4.tac Для каких задач вам нужна фанера?
 						.quiz__list
@@ -95,42 +96,42 @@ block content
 								input.check__input(type="radio" name="zadacha" value="Для пола")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-1-item-1.jpg", alt="")
+										img(src="_/uploads/quiz/step-1-item-1.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Для пола
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="zadacha" value="Для потолка")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-1-item-2.jpg", alt="")
+										img(src="_/uploads/quiz/step-1-item-2.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Для потолка
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="zadacha" value="Для стен")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-1-item-3.jpg", alt="")
+										img(src="_/uploads/quiz/step-1-item-3.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Для стен
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="zadacha" value="Для опалубки")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-1-item-4.jpg", alt="")
+										img(src="_/uploads/quiz/step-1-item-4.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Для опалубки
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="zadacha" value="Для кровли")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-1-item-5.jpg", alt="")
+										img(src="_/uploads/quiz/step-1-item-5.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Для кровли
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="zadacha" value="Другое")
 								.check__wrap
 									.check__img(style="background: #FBCC50")
-										img(src="_/uploads/icons/quest.svg", alt="")
+										img(src="_/uploads/icons/quest.svg", alt="" loading="lazy")
 									.check__point
 									.check__text Другое
 				//- ВТОРОЙ ШАГ
@@ -138,11 +139,11 @@ block content
 					.quiz__head
 						.quiz__num 2 вопрос из 4
 						.quiz__arrow.quiz-prev.quiz__btn-prev
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 						.quiz__arrow.quiz-next.quiz__btn-next
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 					.quiz__bar
-						img(src="_/uploads/icons/bar.svg", alt="")
+						img(src="_/uploads/icons/bar.svg", alt="" loading="lazy")
 					.quiz__body
 						.quiz__step-name.h4.tac Какой тип фанеры необходим?
 						.quiz__list
@@ -150,42 +151,42 @@ block content
 								input.check__input(type="radio" name="type" value="Ламинированная-Влагостойкая")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-2-item-1.jpg", alt="")
+										img(src="_/uploads/quiz/step-2-item-1.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Ламинированная /#[br]Влагостойкая фанера
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="type" value="Шлифованная фанера")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-2-item-2.jpg", alt="")
+										img(src="_/uploads/quiz/step-2-item-2.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Шлифованная фанера
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="type" value="Бакелитовая фанера (ФБ)")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-2-item-3.jpg", alt="")
+										img(src="_/uploads/quiz/step-2-item-3.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Бакелитовая фанера (ФБ)
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="type" value="Фанера ФК")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-2-item-4.jpg", alt="")
+										img(src="_/uploads/quiz/step-2-item-4.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Фанера ФК
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="type" value="Фанера ФСФ")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-2-item-5.jpg", alt="")
+										img(src="_/uploads/quiz/step-2-item-5.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Фанера ФСФ / Строительная
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="type" value="Нужна помощь")
 								.check__wrap
 									.check__img(style="background: #FBCC50")
-										img(src="_/uploads/icons/quest.svg", alt="")
+										img(src="_/uploads/icons/quest.svg", alt="" loading="lazy")
 									.check__point
 									.check__text Не могу сказать, #[br]нужна помощь в выборе
 				//- ТРЕТИЙ ШАГ
@@ -193,11 +194,11 @@ block content
 					.quiz__head
 						.quiz__num 3 вопрос из 4
 						.quiz__arrow.quiz-prev.quiz__btn-prev
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 						.quiz__arrow.quiz-next.quiz__btn-next
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 					.quiz__bar
-						img(src="_/uploads/icons/bar.svg", alt="")
+						img(src="_/uploads/icons/bar.svg", alt="" loading="lazy")
 					.quiz__body
 						.quiz__step-name.h4.tac Какая толщина необходима?
 						.quiz__list.--w6
@@ -269,11 +270,11 @@ block content
 					.quiz__head
 						.quiz__num 4 вопрос из 4
 						.quiz__arrow.quiz-prev.quiz__btn-prev
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 						.quiz__arrow.quiz-next.quiz__btn-next
-							img(src="_/uploads/icons/arrow.svg", alt="")
+							img(src="_/uploads/icons/arrow.svg", alt="" loading="lazy")
 					.quiz__bar
-						img(src="_/uploads/icons/bar.svg", alt="")
+						img(src="_/uploads/icons/bar.svg", alt="" loading="lazy")
 					.quiz__body
 						.quiz__step-name.h4.tac Нужна ли доставка?
 						.quiz__list
@@ -281,14 +282,14 @@ block content
 								input.check__input(type="radio" name="delivery" value="Да, нужна")
 								.check__wrap
 									.check__img
-										img(src="_/uploads/quiz/step-4-item-1.png", alt="")
+										img(src="_/uploads/quiz/step-4-item-1.png", alt="" loading="lazy")
 									.check__point
 									.check__text Да, нужна
 							.quiz__item.check.--img.quiz__btn-next
 								input.check__input(type="radio" name="delivery" value="Заберу самостоятельно")
 								.check__wrap
 									.check__img.cover
-										img(src="_/uploads/quiz/step-4-item-2.jpg", alt="")
+										img(src="_/uploads/quiz/step-4-item-2.jpg", alt="" loading="lazy")
 									.check__point
 									.check__text Заберу самостоятельно
 						.quiz__act
@@ -303,20 +304,21 @@ block content
 							.form__field.field.--required.--tel
 								.field__wrap
 									.field__icon
-										img(src="_/uploads/icons/tel-gray.svg", alt="")
+										img(src="_/uploads/icons/tel-gray.svg", alt="" loading="lazy")
 									input.field__area(type="tel" name="tel" placeholder="Введите ваш телефон")
 							.form__btn.btn.--primary Получить персональное предложение
 						.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
 			
 			.quiz__decor
 				.quiz__decor-item.decor-item
-					img(src="_/uploads/decor/decor-4.png", alt="")
+					img(src="_/uploads/decor/decor-4.png", alt="" loading="lazy")
 				.quiz__decor-item.decor-item
-					img(src="_/uploads/decor/decor-5.png", alt="")
+					img(src="_/uploads/decor/decor-5.png", alt="" loading="lazy")
 		.quiz__decor-bottom.decor-bottom.cover
-			img(src="_/uploads/decor/decor-bottom.png", alt="")
+			img(src="_/uploads/decor/decor-bottom.png", alt="" loading="lazy")
+		.anchore__link#quiz
 
-	.consult.bg
+	.consult.bg.anchore
 		.case
 			.consult__wrap.row
 				.consult__info
@@ -328,7 +330,7 @@ block content
 						.consult__pros-item.h5 #[strong Рассчитаем точную стоимость] вашего заказа с доставкой до нужного места
 				.consult__preview
 					.consult__img
-						img(src="_/uploads/manager.png" srcset="_/uploads/manager-2x.png 2x", alt="")
+						img(src="_/uploads/manager.png" srcset="_/uploads/manager-2x.png 2x", alt="" loading="lazy")
 					.consult__person.tac
 						.consult__person-name.h5 Никита Сивков
 						.consult__person-duty Менеджер по продажам #[br]Опыт более 10 лет
@@ -339,31 +341,32 @@ block content
 						.form__field.field.--required.--name
 							.field__wrap
 								.field__icon
-									img(src="_/uploads/icons/person-gray.svg", alt="")
+									img(src="_/uploads/icons/person-gray.svg", alt="" loading="lazy")
 								input.field__area(type="name" name="name" placeholder="Как к вам обращаться*")
 						.form__field.field.--required.--tel
 							.field__wrap
 								.field__icon
-									img(src="_/uploads/icons/tel-gray.svg", alt="")
+									img(src="_/uploads/icons/tel-gray.svg", alt="" loading="lazy")
 								input.field__area(type="tel" name="tel" placeholder="Ваш телефон*")
 						.form__btn.btn.--primary Получить консультацию
 					.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.inline обработки данных] #[br]и #[a(href="/politika.pdf" target="_blank").link.inline политикой конфиденциальности]
 		.consult__bg.bg-img
 			picture
 				source(srcset="_/uploads/consult-bg.webp" type="image/webp")
-				img(src="_/uploads/consult-bg.jpg" alt="")
+				img(src="_/uploads/consult-bg.jpg" alt="" loading="lazy")
+		.anchore__link#consult
 
-	.qual.bg
+	.qual.bg.anchore
 		.case
 			.qual__title.h2.tac #[h2 #[strong Качественная фанера –] #[br]лучший выбор для строительства]
 			.qual__wrap
 				.qual__img
-					img(src="_/uploads/product.png" srcset="_/uploads/product-2x.png 2x", alt="")
+					img(src="_/uploads/product.png" srcset="_/uploads/product-2x.png 2x", alt="" loading="lazy")
 				.qual__list
 					mixin qual(img, name, text)
 						.qual__item
 							.qual__icon
-								img(src=img, alt="")
+								img(src=img, alt="" loading="lazy")
 							.qual__info
 								.qual__name!=name
 								.qual__text!=text
@@ -377,16 +380,17 @@ block content
 		.qual__bg.bg-img
 			picture
 				source(srcset="_/uploads/qual-bg.webp" type="image/webp")
-				img(src="_/uploads/qual-bg.jpg" alt="")
+				img(src="_/uploads/qual-bg.jpg" alt="" loading="lazy")
+		.anchore__link#qual
 
-	.type
+	.type.anchore
 		.case
 			.type__title.h2.tac #[h2 #[strong Идеально подходит] #[br]для следующих видов работ ]
 			.type__list
 				mixin type(img, name, text)
 					.type__item
 						.type__img.cover
-							img(src=img, alt="")
+							img(src=img, alt="" loading="lazy")
 						.type__info.tac
 							.type__name.h5=name
 							.type__text!=text
@@ -401,9 +405,10 @@ block content
 				+type('_/uploads/type/type-8.jpg', 'Для хоз.построек', 'Обладает высокой стойкостью к погодным условиям и обеспечивает долговечность построек')
 		.type__decor
 			.type__decor-item.decor-item
-				img(src="_/uploads/decor/decor-6.png", alt="")
+				img(src="_/uploads/decor/decor-6.png", alt="" loading="lazy")
 			.type__decor-item.decor-item
-				img(src="_/uploads/decor/decor-7.png", alt="")
+				img(src="_/uploads/decor/decor-7.png", alt="" loading="lazy")
+		.anchore__link#type
 
 	.order.bg
 		.case
@@ -414,14 +419,14 @@ block content
 					.order__field.field.--md.--required.--tel
 						.field__wrap
 							.field__icon
-								img(src="_/uploads/icons/tel-gray.svg", alt="")
+								img(src="_/uploads/icons/tel-gray.svg", alt="" loading="lazy")
 							input.field__area(type="tel" name="tel" placeholder="Ваш номер телефона")
 					.order__btn.btn.--primary.--md Рассчитать стоимость заказа
 				.order__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.--primary.inline обработки данных] и #[a(href="/politika.pdf" target="_blank").link.--primary.inline политикой конфиденциальности]
 		.order__bg.bg-img
 			picture
 				source(srcset="_/uploads/order-1.webp" type="image/webp")
-				img(src="_/uploads/order-1.jpg" alt="")
+				img(src="_/uploads/order-1.jpg" alt="" loading="lazy")
 
 	.gallery
 		.case
@@ -431,27 +436,27 @@ block content
 					.gallery__slider-slide.swiper-slide.cover
 						picture
 							source(srcset="_/uploads/gallery/gallery-1.webp" type="image/webp")
-							img(src="_/uploads/gallery/gallery-1.jpg" alt="")
+							img(src="_/uploads/gallery/gallery-1.jpg" alt="" loading="lazy")
 					.gallery__slider-slide.swiper-slide.cover
 						picture
 							source(srcset="_/uploads/gallery/gallery-2.webp" type="image/webp")
-							img(src="_/uploads/gallery/gallery-2.jpg" alt="")
+							img(src="_/uploads/gallery/gallery-2.jpg" alt="" loading="lazy")
 					.gallery__slider-slide.swiper-slide.cover
 						picture
 							source(srcset="_/uploads/gallery/gallery-3.webp" type="image/webp")
-							img(src="_/uploads/gallery/gallery-3.jpg" alt="")
+							img(src="_/uploads/gallery/gallery-3.jpg" alt="" loading="lazy")
 					.gallery__slider-slide.swiper-slide.cover
 						picture
 							source(srcset="_/uploads/gallery/gallery-4.webp" type="image/webp")
-							img(src="_/uploads/gallery/gallery-4.jpg" alt="")
+							img(src="_/uploads/gallery/gallery-4.jpg" alt="" loading="lazy")
 					.gallery__slider-slide.swiper-slide.cover
 						picture
 							source(srcset="_/uploads/gallery/gallery-5.webp" type="image/webp")
-							img(src="_/uploads/gallery/gallery-5.jpg" alt="")
+							img(src="_/uploads/gallery/gallery-5.jpg" alt="" loading="lazy")
 					.gallery__slider-slide.swiper-slide.cover
 						picture
 							source(srcset="_/uploads/gallery/gallery-6.webp" type="image/webp")
-							img(src="_/uploads/gallery/gallery-6.jpg" alt="")
+							img(src="_/uploads/gallery/gallery-6.jpg" alt="" loading="lazy")
 				.gallery__slider-controls
 					.gallery__slider-pagination.swiper-pagination
 					.gallery__slider-arrows
@@ -460,7 +465,7 @@ block content
 						.gallery__slider-arrow.swiper-button-next
 							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 11L0.999999 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
 
-	.delivery.pb0
+	.delivery.pb0.anchore
 		.case
 			.delivery__wrap.row
 				.delivery__img.cover
@@ -470,19 +475,20 @@ block content
 					.delivery__list
 						.delivery__item
 							.delivery__icon
-								img(src="_/uploads/icons/check-bg.svg", alt="")
+								img(src="_/uploads/icons/check-bg.svg", alt="" loading="lazy")
 							.delivery__text Доставка по Москве и области #[i]в день заказа
 						.delivery__item
 							.delivery__icon
-								img(src="_/uploads/icons/check-bg.svg", alt="")
+								img(src="_/uploads/icons/check-bg.svg", alt="" loading="lazy")
 							.delivery__text Платите только по факту доставки любым удобным #[br]способом, никаких предоплат
 						.delivery__item
 							.delivery__icon
-								img(src="_/uploads/icons/check-bg.svg", alt="")
+								img(src="_/uploads/icons/check-bg.svg", alt="" loading="lazy")
 							.delivery__text При необходимости, вы можете #[strong приехать #[br]за заказом самостоятельно] и оплатить #[i]на месте
 					a.delivery__btn.btn.--primary(data-fancybox data-src="#modal-price" href="javascript:;") Узнать стоимость #[i]фанеры с доставкой
+		.anchore__link#delivery
 
-	.why
+	.why.anchore
 		.case
 			.why__title.h2.tac #[h2 Почему выбирают нас, а не других]
 			.why__list.row
@@ -493,7 +499,7 @@ block content
 					.why__img
 						img(src="_/uploads/why-1.png" srcset="_/uploads/why-1-2x.png 2x", alt="")
 					.why__bg.bg-img
-						img(src="_/uploads/why-bg-1.jpg", alt="")
+						img(src="_/uploads/why-bg-1.jpg", alt="" loading="lazy")
 				.why__item.--w2.bg
 					.why__info
 						.why__name.h4 При производстве используется только качественное сырье
@@ -501,7 +507,7 @@ block content
 					.why__img
 						img(src="_/uploads/why-2.png" srcset="_/uploads/why-2-2x.png 2x", alt="")
 					.why__bg.bg-img
-						img(src="_/uploads/why-bg-2.jpg", alt="")
+						img(src="_/uploads/why-bg-2.jpg", alt="" loading="lazy")
 				.why__item.bg
 					.why__info
 						.why__name.h4 Экономия #[br]до 30% бюджета
@@ -509,7 +515,7 @@ block content
 					.why__img
 						img(src="_/uploads/why-3.png" srcset="_/uploads/why-3-2x.png 2x", alt="")
 					.why__bg.bg-img
-						img(src="_/uploads/why-bg-3.jpg", alt="")
+						img(src="_/uploads/why-bg-3.jpg", alt="" loading="lazy")
 				.why__item.bg
 					.why__info
 						.why__name.h4 Контроль всей продукции перед отправкой
@@ -517,7 +523,7 @@ block content
 					.why__img
 						img(src="_/uploads/why-4.png" srcset="_/uploads/why-4-2x.png 2x", alt="")
 					.why__bg.bg-img
-						img(src="_/uploads/why-bg-1.jpg", alt="")
+						img(src="_/uploads/why-bg-1.jpg", alt="" loading="lazy")
 				.why__item.bg
 					.why__info
 						.why__name.h4 Гарантия возврата средств, если вас #[br]не устроит качество
@@ -525,18 +531,19 @@ block content
 					.why__img
 						img(src="_/uploads/why-5.png" srcset="_/uploads/why-5-2x.png 2x", alt="")
 					.why__bg.bg-img
-						img(src="_/uploads/why-bg-5.jpg", alt="")
+						img(src="_/uploads/why-bg-5.jpg", alt="" loading="lazy")
 		.why__decor
 			.why__decor-item.decor-item
-				img(src="_/uploads/decor/decor-8.png", alt="")
+				img(src="_/uploads/decor/decor-8.png", alt="" loading="lazy")
 			.why__decor-item.decor-item
-				img(src="_/uploads/decor/decor-8.png", alt="")
+				img(src="_/uploads/decor/decor-8.png", alt="" loading="lazy")
 			.why__decor-item.decor-item
-				img(src="_/uploads/decor/decor-5.png", alt="")
+				img(src="_/uploads/decor/decor-5.png", alt="" loading="lazy")
 			.why__decor-item.decor-item
-				img(src="_/uploads/decor/decor-4.png", alt="")
+				img(src="_/uploads/decor/decor-4.png", alt="" loading="lazy")
+		.anchore__link#why
 
-	.order.bg
+	.order.bg.achore
 		.case
 			.order__title.h2.tac #[h2 Распил по вашим размерам]
 			.order__subtitle.tac Оставьте заявку и мы рассчитаем ваш заказ с учетом доставки уже через 5 минут
@@ -545,16 +552,17 @@ block content
 					.order__field.field.--md.--required.--tel
 						.field__wrap
 							.field__icon
-								img(src="_/uploads/icons/tel-gray.svg", alt="")
+								img(src="_/uploads/icons/tel-gray.svg", alt="" loading="lazy")
 							input.field__area(type="tel" name="tel" placeholder="Ваш номер телефона")
 					.order__btn.btn.--primary.--md Рассчитать стоимость заказа
 				.order__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.--primary.inline обработки данных] и #[a(href="/politika.pdf" target="_blank").link.--primary.inline политикой конфиденциальности]
 		.order__bg.bg-img
 			picture
 				source(srcset="_/uploads/order-2.webp" type="image/webp")
-				img(src="_/uploads/order-2.jpg" alt="")
+				img(src="_/uploads/order-2.jpg" alt="" loading="lazy")
+		.anchore__link#order2
 
-	.reviews
+	.reviews.anchore
 		.case
 			.reviews__title.h2.tac #[h2 А вот, что пишут те, с кем мы уже работали]
 			.reviews__wrap
@@ -585,11 +593,12 @@ block content
 							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21L2 11L12 1" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
 						.reviews__slider-arrow.swiper-button-next
 							<svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1L11 11L0.999999 21" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-		.reviews__decor
-			.reviews__decor-item.decor-item
-				img(src="_/uploads/decor/decor-4.png", alt="" loading="lazy")
-			.reviews__decor-item.decor-item
-				img(src="_/uploads/decor/decor-5.png", alt="" loading="lazy")
+			.reviews__decor
+				.reviews__decor-item.decor-item
+					img(src="_/uploads/decor/decor-4.png", alt="" loading="lazy")
+				.reviews__decor-item.decor-item
+					img(src="_/uploads/decor/decor-5.png", alt="" loading="lazy")
+		.anchore__link#reviews
 
 	.quest.bg
 		.case
@@ -600,12 +609,12 @@ block content
 					.form__field.field.--required.--name
 						.field__wrap
 							.field__icon
-								img(src="_/uploads/icons/person-gray.svg", alt="")
+								img(src="_/uploads/icons/person-gray.svg", alt="" loading="lazy")
 							input.field__area(type="name" name="name" placeholder="Введите ваше имя")
 					.form__field.field.--required.--tel
 						.field__wrap
 							.field__icon
-								img(src="_/uploads/icons/tel-gray.svg", alt="")
+								img(src="_/uploads/icons/tel-gray.svg", alt="" loading="lazy")
 							input.field__area(type="tel" name="tel" placeholder="Ваш телефон")
 					.form__btn.btn.--primary.--md Получить консультацию
 				.form__policy.tac Нажимая на кнопку вы соглашаетесь с условиями #[a(href="/politika.pdf" target="_blank").link.--primary.inline обработки данных] и #[a(href="/politika.pdf" target="_blank").link.--primary.inline политикой конфиденциальности]
@@ -613,14 +622,14 @@ block content
 				.quest__call-title.tac Или позвоните нам по телефону
 				.quest__call-wrap.row
 					.quest__call-img
-						img(src="_/uploads/tel.png" srcset="_/uploads/tel-2x.png 2x", alt="")
+						img(src="_/uploads/tel.png" srcset="_/uploads/tel-2x.png 2x", alt="" loading="lazy")
 					a.quest__call-link.tel(href="tel:+79853979759") +7 (985) 397-97-59
 		.quest__bg.bg-img
 			picture
 				source(srcset="_/uploads/quest-bg.webp" type="image/webp")
-				img(src="_/uploads/quest-bg.jpg" alt="")
+				img(src="_/uploads/quest-bg.jpg" alt="" loading="lazy")
 
-	.contacts#contacts
+	.contacts.ancore
 		.case
 			.contacts__wrap
 				.contacts__info
@@ -641,7 +650,8 @@ block content
 				.contacts__img.cover
 					picture
 						source(srcset="_/uploads/contacts-img.webp" type="image/webp")
-						img(src="_/uploads/contacts-img.jpg" alt="")
+						img(src="_/uploads/contacts-img.jpg" alt="" loading="lazy")
 		.contacts__map.map
 			.map__area#map(data-map="55.611136, 37.489851" data-placeholder="55.611136, 37.489851")
 			script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+		.anchore__link#contacts

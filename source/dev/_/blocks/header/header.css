@@ -3,7 +3,7 @@
   z-index: 100;
   padding: 20px 0;
   position: fixed;
-  transition: var(--transition);
+  transition: 0.2s;
 }
 .header__wrap {
   align-items: center;

@@ -18,6 +18,22 @@ window.onload = () => {
     document.addEventListener('scroll', headerFix);
   }
 
+  // ANCHORE
+  const smoothLinks = document.querySelectorAll('a[href^="#"]');
+
+  for (let smoothLink of smoothLinks) {
+    smoothLink.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const id = smoothLink.getAttribute('href');
+
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  }
+
   // SIDE-PANEL
   let sidePanel = document.querySelector('.side-panel');
   let sidePanelClose = document.querySelector('.side-panel__close');
